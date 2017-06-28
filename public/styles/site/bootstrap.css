@@ -4970,7 +4970,7 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-	color: #5d5d5d;
+	color: #767676;
 	background-color: transparent;
 }
 
@@ -4983,7 +4983,7 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-	color: inherit;
+	color: #787878;
 	background-color: transparent;
 }
 
@@ -7725,7 +7725,7 @@ a.text-gray-lighter:hover {
 }
 
 .bg-app {
-	background-color: #7dc855;
+	background-color: #77c9dc;
 }
 
 .bg-app-primary {
@@ -7846,7 +7846,7 @@ a.bg-inverse, a.bg-inverse:hover, a.bg-inverse:focus {
 
 /* Grid */
 .container {
-	max-width: 1170px;
+	max-width: 1280px;
 }
 
 .container,
