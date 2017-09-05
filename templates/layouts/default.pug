@@ -9,7 +9,7 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
-		title= title || 'iTalent Incubator'
+		title= title || '娱信互动'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.less
@@ -34,7 +34,7 @@ html
 		block head
 
 	//- HTML BODY
-	body
+	body.app-ui
 		.app-layout-canvas
 			.app-layout-container
 				#header.app-layout-header
@@ -52,7 +52,7 @@ html
 									span.icon-bar
 								//- Header logo
 								a(class="navbar-brand" href="javascript:void(0)")
-									img(class="img-responsive" src="images/logo-frontend.png" title="iTalent Icubator" alt="ITSI")
+									img(class="img-responsive" src="images/itsilogo.png" title="iTalent Icubator" alt="ITSI")
 							#header-navbar-collapse.collapse.navbar-collapse
 								//- Header search form
 								form(class="navbar-form navbar-right app-search-form" role="search")
@@ -93,11 +93,17 @@ html
 
 
 				//- FOOTER
-				.container: #footer
+				//- .container: #footer
 
 					//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-					p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
-
+					//- p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+				footer.app-layout-footer
+					.container.p-y-md
+						.pull-right.hidden-sm.hidden-xs
+							
+						.pull-left.text-center.text-md-left
+							| ITSI 北京娱信互动信息技术有限公司 &copy 
+							span.js-year-copy 2004
 
 		//- JAVASCRIPT
 

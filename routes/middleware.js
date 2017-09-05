@@ -20,10 +20,10 @@ var _ = require('lodash');
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
 		{ label: '首页', key: 'home', href: '/' },
-		{ label: '端软件开发', key: 'blog', href: '/blog' },
-		{ label: '端人才孵化', key: 'blog', href: '/blog' },
-		{ label: '端人才输出', key: 'blog', href: '/blog' },
-		{ label: '技术博客', key: 'blog', href: '/blog' },
+		{ label: '软件开发', key: 'blog', href: '/blog' },
+		{ label: 'IT服务', key: 'blog', href: '/blog' },
+		{ label: 'Open-Knowledge', key: 'blog', href: '/blog' },
+		{ label: '加入我们', key: 'blog', href: '/blog' },
 		{ label: '关于我们', key: 'contact', href: '/contact' },
 	];
 	res.locals.user = req.user;
