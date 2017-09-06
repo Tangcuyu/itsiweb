@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 block content
-	figure(class="banner" data-height="600" style="background-image: url(images/bg.png);")
+	figure(class="banner" data-height="600")
 		figcaption(class="banner-caption")
 			.container.p-y-xl
 				.styles_banner
@@ -16,7 +16,7 @@ block content
 							a(class="styles__hero__button__secondary___uUXA2" href="#intro") or 详细了解...
 	section.bg-white
 		#intro.container.p-y-xl.b-b
-			.row.m-b-md
+			.row
 				.col-md-6.col-md-offset-3.text-center
 					.section-tag
 						| 开发理念
@@ -39,8 +39,6 @@ block content
 		.container
 			.row.m-b-md
 				.col-md-6.col-md-offset-3.text-center
-					.section-tag
-						| 开发能力
 					h2(h1 display-1 m-t) 产品质量为根本
 			.row.vcenter-md.m-b-md
 				.col-md-4.col-md-offset-1.text-center.text-md-left
@@ -70,7 +68,7 @@ block content
 			.row.vcenter-md.m-b-md
 				.col-md-4.col-md-offset-1.text-center.text-md-left
 					h2.h1.display-1.m-b 后端技术栈
-					p.lead.m-b-lg 最流行的JAVA构建工具，快速、轻量级和功能强大的后端JAVA框架，微服务支持，多种类型数据库集成，稳定的安全框架和RESTful支持，融合云端快捷部署。
+					p.lead.m-b-lg 最流行的JAVA构建工具，快速、轻量级和功能强大的后端JAVA框架，微服务支持，多种类型数据库集成，稳定的安全框架和RESTful支持，融合云端快捷部署
 					p.text-muted MAVEN、SPRING、SPRING MVC REST、SPRING DATA JPA、NETFLIX OSS、LIQUIBASE
 					p.m-b-md
 						a(class="btn btn-app btn-lg" href="/contact") 详细信息
@@ -80,19 +78,81 @@ block content
 	section.p-y-xl.bg-white.hidden-sm.hidden-xs
 		.container
 			.row.m-b-md
-				.col-md-4.col-md-offset-1
+				.col-md-6.col-md-offset-3.text-center
+					.section-tag
+						| 开发流程
+					h2(h1 display-1 m-t) 规范化开发流程
+			.row.vcenter-md.m-b-md
+				.col-md-4.col-md-offset-2
 					.img-box
 						img(class="img-avatar" src="images/interface.svg")
 						.img-text
-							h2.h2.m-t-0 设计团队
-							p.m-b developers
-							a(href="/contact") Views all projects
+							h2.h2.m-t-0 BA团队
+							p.m-b 需求分析是项目成败的关键
+							a(href="/contact") 查看成功案例
 								i.ion-ios-arrow-right.m-l-xs
-				.col-md-4.col-md-offset-2
+				.col-md-1
 					.img-box
-						img(class="img-avatar" src="images/cto.svg")
+						img(src="images/arrowright.svg")
+				.col-md-4
+					.img-box
+						img(class="img-avatar" src="images/ba.svg")
+						.img-text
+							h2.h2.m-t-0 设计团队
+							p.m-b 系统原型展现出系统上线时候的全貌
+							a(href="javascript:void(0)") 查看成功案例
+								i.ion-ios-arrow-right.m-l-xs
+				.col-md-1
+					.img-box
+						img(src="images/arrowright.svg")
+				.col-md-4
+					.img-box
+						img(class="img-avatar" src="images/cto1.svg")
 						.img-text
 							h2.h2.m-t-0 开发团队
-							p.m-b developers
-							a(href="javascript:void(0)") Views all projects
+							p.m-b 统一标准编码，保证了系统扩展和移植
+							a(href="javascript:void(0)") 查看成功案例
+								i.ion-ios-arrow-right.m-l-xs
+			.row.vcenter-md.m-b-md
+				.col-md-4
+					.img-box
+						img(class="img-avatar" src="images/flag.svg")
+						.img-text
+							h2.h2.m-t-0 销售团队
+							p.m-b 项目启动
+							a(href="/contact") 查看成功案例
+								i.ion-ios-arrow-right.m-l-xs
+				.col-md-2.col-md-offset-7
+					.img-box
+						img(src="images/arrow.svg")
+			.row.vcenter-md.m-b-md
+				.col-md-4.col-md-offset-2
+					.img-box
+						img(class="img-avatar" src="images/mainten.svg")
+						.img-text
+							h2.h2.m-t-0 维护团队
+							p.m-b 对系统的运行进行维护和技术支持
+							a(href="/contact") 查看成功案例
+								i.ion-ios-arrow-right.m-l-xs
+				.col-md-1
+					.img-box
+						img(src="images/arrowleft.svg")
+				.col-md-4
+					.img-box
+						img(class="img-avatar" src="images/cloud.svg")
+						.img-text
+							h2.h2.m-t-0 部署团队
+							p.m-b 确保在项目规定的时间内部署系统上线运行
+							a(href="javascript:void(0)") 查看成功案例
+								i.ion-ios-arrow-right.m-l-xs
+				.col-md-1
+					.img-box
+						img(src="images/arrowleft.svg")
+				.col-md-4
+					.img-box
+						img(class="img-avatar" src="images/test.svg")
+						.img-text
+							h2.h2.m-t-0 测试团队
+							p.m-b 完善的系统测试保证系统的正常上线
+							a(href="javascript:void(0)") 查看成功案例
 								i.ion-ios-arrow-right.m-l-xs

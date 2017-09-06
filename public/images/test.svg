@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="373px" height="395px" viewBox="0 0 373 395" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,3 L221.8125,3 C221.809998,12.46875 304,74.7412567 304,84.2100067 C304,85.8584442 304,6.296875 304,7.9453125 C304,17.0611979 304,-6.11588542 304,3 L304,78.1171875 L304,84.2100067 L304,398 L0,398 L0,3 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(0.000000, -3.000000)">
+            <g id="Rectangle">
+                <use fill-opacity="0.160439312" fill="#F8E81C" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <path stroke="#F6A623" stroke-width="8" d="M300,84.5370321 L300,394 L4,394 L4,7 L219.05218,7 C220.956579,10.4038639 225.110952,14.8061346 231.898673,21.2525557 C238.376597,27.4047562 244.819342,33.1275508 260.274906,46.6184678 C260.275375,46.6188774 260.275375,46.6188774 260.275845,46.6192869 C275.640211,60.0305986 282.039843,65.7150151 288.403689,71.7586489 C292.378663,75.5336115 295.390375,78.6072999 297.428776,80.9904421 C298.450692,82.1851877 299.203886,83.1797527 299.670038,83.9375127 C299.822079,84.1846638 299.932012,84.3881117 300,84.5370321 Z"></path>
+            </g>
+            <path d="M54.5,200 L251,200" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M54.5,346 L251,346" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M54.5,305 L251,305" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M53.5,151 L250,151" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M54.5,222 L251,222" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M53.5,274 L250,274" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <polygon id="Triangle" stroke="#979797" fill-opacity="0.35" fill="#080707" transform="translate(263.000000, 124.500000) scale(-1, -1) translate(-263.000000, -124.500000) " points="222 84 304 165 222 165"></polygon>
+            <polygon id="Triangle-Copy" stroke="#979797" fill-opacity="0.39806952" fill="#F9F3F3" points="222 4 304 85 222 85"></polygon>
+            <path d="M53.5,81 L135.5,81" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M53.5,106 L162,106" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M53.5,128 L209,128" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M53.5,245 L250,245" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M53.5,176 L250,176" id="Line" stroke="#DBCDCD" stroke-width="6" stroke-linecap="square"></path>
+            <g id="Group" transform="translate(251.500000, 251.000000) rotate(-12.000000) translate(-251.500000, -251.000000) translate(163.000000, 127.000000)" stroke="#F6A623">
+                <ellipse id="Oval" stroke-width="8" fill-opacity="0.0350713315" fill="#D8D8D8" cx="51.5" cy="50" rx="51.5" ry="50"></ellipse>
+                <path d="M84.5,93.5 L176.5,247.5" id="Line" stroke-width="13" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>
