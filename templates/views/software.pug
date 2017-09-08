@@ -4,36 +4,16 @@ block content
 	figure(class="banner" data-height="650" style="background: url('images/bg.jpg') repeat;")
 		figcaption(class="banner-caption")
 			.container
-				.slider.single-item
-					.styles_banner
-						img(class="styles__logo___1lCjA" src="images/itsilogo-circle-1.png"  alt="")
-						.styles__hero__title___DH178
-							p.styles__heading1___yx_UY 设计.开发.交付
-						.styles__hero__subtitle___uMSim.styles_banner
-							| 我们提供专业的软件系统设计、开发和交付服务；基于组件化、高效安全的快速开发平台,
-							| 我们为客户提供移动互联网环境下的新一代的移动APP、软件产品和信息管理系统。
-						.styles__hero__buttons___2QWHq
-								a(class="btn btn-app btn-lg"  href="#contact") 联系我们  
-								a(class="styles__hero__button__secondary___uUXA2" href="#intro") or 详细了解...
-					.styles_banner
-						img(class="styles__logo___1lCjA" src="images/itsilogo-bluecircle.png"  alt="")
-						.styles__hero__title___DH178
-							p.styles__heading1___yx_UY Open-Knowledge
-						.styles__hero__subtitle___uMSim.styles_banner
-							| 我们是开源世界的培训师;在开源的世界里，为培养专业的软件开发人才提供知识分享和学习平台。
-							| Open-Knowledge融合了线上和线下学习社区，涵盖了从前端开发到云端开发的全栈开发培养体系。
-						.styles__hero__buttons___2QWHq
-								a(class="btn btn-app btn-lg"  href="#contact") 亲身体验 
-								a(class="styles__hero__button__secondary___uUXA2" href="#intro") or 详细了解...
-					.styles_banner
-						img(class="styles__logo___1lCjA" src="images/itsilogo.png"  alt="")
-						.styles__hero__title___DH178
-							p.styles__heading1___yx_UY 人才输出.驻场支持
-						.styles__hero__subtitle___uMSim.styles_banner
-							| 客户通过我们提供的人才输出和外包服务，可以招聘到许多从其他渠道难以找到的高质量、精通专业技能、富有责任心的专业IT开发人才
-						.styles__hero__buttons___2QWHq
-								a(class="btn btn-app btn-lg"  href="#contact") 联系我们  
-								a(class="styles__hero__button__secondary___uUXA2" href="#intro") or 详细了解...
+				.styles_banner
+					img(class="styles__logo___1lCjA" src="images/itsilogo-circle-1.png"  alt="")
+					.styles__hero__title___DH178
+						p.styles__heading1___yx_UY 设计.开发.交付
+					.styles__hero__subtitle___uMSim
+						| 我们提供专业的软件系统设计、开发和交付服务；基于组件化、高效安全的快速开发平台,
+						| 我们为客户提供移动互联网环境下的新一代的移动APP、软件产品和信息管理系统。
+					.styles__hero__buttons___2QWHq
+							a(class="btn btn-app btn-lg"  href="#contact") 联系我们  
+							a(class="styles__hero__button__secondary___uUXA2" href="#intro") or 详细了解...
 	section.bg-white
 		#intro.container.p-y-xl.b-b
 			.row
@@ -42,7 +22,7 @@ block content
 						| 开发理念
 					h2(h1 display-1 m-t) 用户体验为核心
 					p 时刻从用户的角度出发去看待自己开发出来的软件产品；超出用户的预期，形成真正的用户体验；关注产品的每一个细节；
-			.row.text-center.styles_center
+			.row.text-center
 				.col-md-4
 					i.ion-person-stalker.text-green.fa-4x
 					h4 从用户角度出发
@@ -56,7 +36,7 @@ block content
 					h4 用户体验从细节开始
 					p.text-muted 从用户体验的细节出发，从很多细微之处出发，能够对用户体验做出持续的改进。
 	section.p-y-xl.bg-white
-		.container.styles_center
+		.container
 			.row.m-b-md
 				.col-md-6.col-md-offset-3.text-center
 					h2(h1 display-1 m-t) 产品质量为根本
@@ -72,7 +52,7 @@ block content
 				.col-md-4.col-md-offset-2
 					img.img-responsive(src="images/frontend_home3.png")
 	section.p-y-xl.bg-white
-		.container.styles_center
+		.container
 			.row.vcenter-md.m-b-md
 				.col-md-4.col-md-push-7.text-center.text-md-left
 					h2.h1.display-1.m-b 前端技术栈   
@@ -85,7 +65,7 @@ block content
 				.col-md-4.col-md-pull-3
 					img.img-responsive(src="images/frontend_home2.png")
 	section.p-y-xl.bg-white
-		.container.styles_center
+		.container
 			.row.vcenter-md.m-b-md
 				.col-md-4.col-md-offset-1.text-center.text-md-left
 					h2.h1.display-1.m-b 后端技术栈    
@@ -98,16 +78,14 @@ block content
 				.col-md-4.col-md-offset-2
 					img.img-responsive(src="images/frontend_home4.png")
 	section.p-y-xl.bg-white.hidden-sm.hidden-xs
-		.container.styles_center
+		.container
 			.row.m-b-md
 				.col-md-6.col-md-offset-3.text-center
 					.section-tag
 						| 开发流程
 					h2(h1 display-1 m-t) 规范化开发流程
 			.row.vcenter-md.m-b-md
-				.col-md-1.col-md-offset-1
-					img(class="styles_arrowimg" src="images/arrowup.svg")
-				.col-md-4
+				.col-md-4.col-md-offset-2
 					.img-box
 						img(class="img-avatar" src="images/interface.svg")
 						.img-text
@@ -117,7 +95,7 @@ block content
 								i.ion-ios-arrow-right.m-l-xs
 				.col-md-1
 					.img-box
-						img(class="styles_arrowimg" src="images/arrowright.svg")
+						img(src="images/arrowright.svg")
 				.col-md-4
 					.img-box
 						img(class="img-avatar" src="images/ba.svg")
@@ -128,7 +106,7 @@ block content
 								i.ion-ios-arrow-right.m-l-xs
 				.col-md-1
 					.img-box
-						img(class="styles_arrowimg" src="images/arrowright.svg")
+						img(src="images/arrowright.svg")
 				.col-md-4
 					.img-box
 						img(class="img-avatar" src="images/cto1.svg")
@@ -160,7 +138,7 @@ block content
 								i.ion-ios-arrow-right.m-l-xs
 				.col-md-1
 					.img-box
-						img(class="styles_arrowimg" src="images/arrowleft.svg")
+						img(src="images/arrowleft.svg")
 				.col-md-4
 					.img-box
 						img(class="img-avatar" src="images/cloud.svg")
@@ -171,7 +149,7 @@ block content
 								i.ion-ios-arrow-right.m-l-xs
 				.col-md-1
 					.img-box
-						img(class="styles_arrowimg" src="images/arrowleft.svg")
+						img(src="images/arrowleft.svg")
 				.col-md-4
 					.img-box
 						img(class="img-avatar" src="images/test.svg")
@@ -188,7 +166,3 @@ block content
 			.row.p-t-md.p-b-lg
 				.row: .col-sm-8.col-md-6.col-md-offset-3
 					include ../includes/contact.pug
-
-block js
-	script(src='/js/appui/slick.min.js')
-	script(src='/js/appui/homeslick.js')

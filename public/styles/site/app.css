@@ -1655,6 +1655,15 @@ a.card:not(.bg-inverse):hover {
 	height: 600px;
 }
 
+
+.banner[data-height="650"] {
+	height: 670px;
+}
+
+.banner[data-height="700"] {
+	height: 700px;
+}
+
 .banner-caption {
 	white-space: normal;
 	z-index: 3;
@@ -1664,7 +1673,7 @@ a.card:not(.bg-inverse):hover {
 	top: 0;
 	bottom: 0;
 	margin: 0 auto;
-	bottom: 50%;
+	bottom: 60%;
 	top: auto;
 	-webkit-transform: translateY(50%);
 	        transform: translateY(50%);
@@ -2861,8 +2870,8 @@ div.tagsinput span.tag a:hover {
 }
 
 .slick-dots li button:before {
-	color: rgba(0, 20, 35, 0.38);
-	font-size: 8px;
+	color: rgba(0, 20, 35, 0.55);
+	font-size: 50px;
 	-webkit-transition: opacity .15s ease-out;
 	transition: opacity .15s ease-out;
 }
@@ -2926,6 +2935,10 @@ div.tagsinput span.tag a:hover {
 	color: #aaa;
 }
 
+.contactbg{
+	background: url('../../images/bg2.png');
+}
+
 /*# sourceMappingURL=maps/app.css.map */
 
 /* home banner*/
@@ -2935,15 +2948,15 @@ div.tagsinput span.tag a:hover {
 	width:80%
 }
 
-.styles__herowrap___258l6{
-	display:-webkit-box;
-	display:-ms-flexbox;
-	display:flex;
-	-webkit-box-align:center;
-	-ms-flex-align:center;
-	align-items:center;
-	padding:18vh 22vh;
+.styles_arrowimg{
+	position: absolute;
 }
+
+.styles_center{
+	margin-left: 80px;
+	width:90%
+}
+
 .styles__heading1___yx_UY{
 	font-size:60px;
 	font-size:3.75rem;

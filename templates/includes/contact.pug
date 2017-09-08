@@ -1,0 +1,23 @@
+if enquirySubmitted
+	h3 非常感谢您给我们联系，我们会第一时间给您回复。
+else
+	.row
+		form(method='post', action='contact')
+			input(type='hidden', name='action', value='contact')
+			.form-group(class=validationErrors.name ? 'has-error' : null)
+				label 姓名
+				input(type='text', name='name.full', value=formData['name.full']).form-control
+			.form-group(class=validationErrors.email ? 'has-error' : null)
+				label 邮箱
+				input(type='email', name='email', value=formData.email).form-control
+			.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
+				label 您想了解些什么?
+				select(name='enquiryType').form-control
+					option(value='') (请选择)
+					each type in enquiryTypes
+						option(value=type.value, selected=formData.enquiryType == type.value)= type.label
+			.form-group(class=validationErrors.message ? 'has-error' : null)
+				label 正文
+				textarea(name='message', placeholder='在这里输入正文...' rows=4).form-control= formData.message
+			.form-actions
+				button(type='submit').btn.btn-success 发送

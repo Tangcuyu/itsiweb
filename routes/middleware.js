@@ -20,7 +20,7 @@ var _ = require('lodash');
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
 		{ label: '首页', key: 'home', href: '/' },
-		{ label: '软件开发', key: 'blog', href: '/blog' },
+		{ label: '软件开发', key: 'software', href: '/software' },
 		{ label: 'IT服务', key: 'blog', href: '/blog' },
 		{ label: 'Open-Knowledge', key: 'blog', href: '/blog' },
 		{ label: '加入我们', key: 'blog', href: '/blog' },
