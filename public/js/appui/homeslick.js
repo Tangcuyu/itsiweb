@@ -4,8 +4,10 @@ $('.single-item').slick({
   dots: true,
   infinite: true,
   arrows: true,
-  speed: 500,
+  speed: 800,
   slidesToShow: 1,
   autoplay: true,
+  fade:true,
+  autoplaySpeed: 10000,
   slidesToScroll: 1
 });
