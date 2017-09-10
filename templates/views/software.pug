@@ -1,45 +1,18 @@
 extends ../layouts/default
 
 block content
-	figure(class="banner" data-height="650" style="background: url('images/bg.jpg') repeat;")
-		figcaption(class="banner-caption")
-			.container
-				.styles_banner
-					img(class="styles__logo___1lCjA" src="images/itsilogo-circle-1.png"  alt="")
-					.styles__hero__title___DH178
-						p.styles__heading1___yx_UY 设计.开发.交付
-					.styles__hero__subtitle___uMSim
-						| 我们提供专业的软件系统设计、开发和交付服务；基于组件化、高效安全的快速开发平台,
-						| 我们为客户提供移动互联网环境下的新一代的移动APP、软件产品和信息管理系统。
-					.styles__hero__buttons___2QWHq
-							a(class="btn btn-app btn-lg"  href="#contact") 联系我们  
-							a(class="styles__hero__button__secondary___uUXA2" href="#intro") or 详细了解...
-	section.bg-white
-		#intro.container.p-y-xl.b-b
-			.row
-				.col-md-6.col-md-offset-3.text-center
-					.section-tag
-						| 开发理念
-					h2(h1 display-1 m-t) 用户体验为核心
-					p 时刻从用户的角度出发去看待自己开发出来的软件产品；超出用户的预期，形成真正的用户体验；关注产品的每一个细节；
-			.row.text-center
-				.col-md-4
-					i.ion-person-stalker.text-green.fa-4x
-					h4 从用户角度出发
-					p.text-muted 用户的习惯是开发者需要观察适应的，软件产品需要通过优秀的交互设计让用户学习
-				.col-md-4
-					i.ion-archive.text-green.fa-4x
-					h4 给用户带来惊喜
-					p.text-muted 什么叫体验？超出用户预期的才叫体验。如果用户用完后，仅仅达到了预期的效果，就不会形成真正的体验。
-				.col-md-4
-					i.ion-pie-graph.text-green.fa-4x
-					h4 用户体验从细节开始
-					p.text-muted 从用户体验的细节出发，从很多细微之处出发，能够对用户体验做出持续的改进。
-	section.p-y-xl.bg-white
+	.page-header.bg-green.bg-inverse
 		.container
+			.p-y-lg.text-center
+				h1.display-2 研发中心
+					.row.m-t
+						.col-sm-6.col-sm-offset-3
+							img(src='images/background-logo.svg' style="height:60px;width:50px")
+	section.p-y-xl.bg-white
+		.container.styles_banner
 			.row.m-b-md
 				.col-md-6.col-md-offset-3.text-center
-					h2(h1 display-1 m-t) 产品质量为根本
+					h2(h1 display-1 m-t) 
 			.row.vcenter-md.m-b-md
 				.col-md-4.col-md-offset-1.text-center.text-md-left
 					h2.h1.display-1.m-b 移动APP   
@@ -52,7 +25,7 @@ block content
 				.col-md-4.col-md-offset-2
 					img.img-responsive(src="images/frontend_home3.png")
 	section.p-y-xl.bg-white
-		.container
+		.container.styles_banner
 			.row.vcenter-md.m-b-md
 				.col-md-4.col-md-push-7.text-center.text-md-left
 					h2.h1.display-1.m-b 前端技术栈   
@@ -65,7 +38,7 @@ block content
 				.col-md-4.col-md-pull-3
 					img.img-responsive(src="images/frontend_home2.png")
 	section.p-y-xl.bg-white
-		.container
+		.container.styles_banner
 			.row.vcenter-md.m-b-md
 				.col-md-4.col-md-offset-1.text-center.text-md-left
 					h2.h1.display-1.m-b 后端技术栈    
@@ -78,14 +51,16 @@ block content
 				.col-md-4.col-md-offset-2
 					img.img-responsive(src="images/frontend_home4.png")
 	section.p-y-xl.bg-white.hidden-sm.hidden-xs
-		.container
+		.container.styles_center
 			.row.m-b-md
 				.col-md-6.col-md-offset-3.text-center
 					.section-tag
 						| 开发流程
 					h2(h1 display-1 m-t) 规范化开发流程
 			.row.vcenter-md.m-b-md
-				.col-md-4.col-md-offset-2
+				.col-md-1.col-md-offset-1
+					img(class="styles_arrowimg" src="images/arrowup.svg")
+				.col-md-4
 					.img-box
 						img(class="img-avatar" src="images/interface.svg")
 						.img-text
@@ -95,7 +70,7 @@ block content
 								i.ion-ios-arrow-right.m-l-xs
 				.col-md-1
 					.img-box
-						img(src="images/arrowright.svg")
+						img(class="styles_arrowimg" src="images/arrowright.svg")
 				.col-md-4
 					.img-box
 						img(class="img-avatar" src="images/ba.svg")
@@ -106,7 +81,7 @@ block content
 								i.ion-ios-arrow-right.m-l-xs
 				.col-md-1
 					.img-box
-						img(src="images/arrowright.svg")
+						img(class="styles_arrowimg" src="images/arrowright.svg")
 				.col-md-4
 					.img-box
 						img(class="img-avatar" src="images/cto1.svg")
@@ -138,7 +113,7 @@ block content
 								i.ion-ios-arrow-right.m-l-xs
 				.col-md-1
 					.img-box
-						img(src="images/arrowleft.svg")
+						img(class="styles_arrowimg" src="images/arrowleft.svg")
 				.col-md-4
 					.img-box
 						img(class="img-avatar" src="images/cloud.svg")
@@ -149,7 +124,7 @@ block content
 								i.ion-ios-arrow-right.m-l-xs
 				.col-md-1
 					.img-box
-						img(src="images/arrowleft.svg")
+						img(class="styles_arrowimg" src="images/arrowleft.svg")
 				.col-md-4
 					.img-box
 						img(class="img-avatar" src="images/test.svg")
@@ -162,7 +137,7 @@ block content
 		#contact.container
 			.row
 				.col-md-6.col-md-offset-3
-					h3.text-center 联系我们
+					h3.text-center 成功案例
 			.row.p-t-md.p-b-lg
 				.row: .col-sm-8.col-md-6.col-md-offset-3
 					include ../includes/contact.pug

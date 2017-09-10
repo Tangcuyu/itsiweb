@@ -7730,6 +7730,7 @@ a.text-gray-lighter:hover {
 
 .bg-app-primary {
 	background-color: #7dc855;
+	background-image: url("images/background-logo.svg");
 }
 
 .bg-app-secondary {
