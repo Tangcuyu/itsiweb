@@ -1,0 +1,115 @@
+extends ../layouts/default
+
+mixin candidate(cand)
+	.post(data-ks-editable=editable(user, { list: 'Candidate', id: cand.id }))
+		h4: a(href='/candidate/cand/' + cand.candid)= cand.name.first
+		p.text-muted 
+			if cand.publishedDate
+				| #{cand._.publishedDate.format( 'YYYY年M月D日')} 初次面试；   应聘  
+			if cand.title
+				a(href='/candidate/' + cand.title.key)= cand.title.name
+		p
+			if cand.eduction
+			| 学       历：
+			!= cand.eduction
+		p
+			if cand.skills && cand.skills.length
+				| 专业技能：
+				each cat, i in cand.skills
+					!= cat.name
+					if i < cand.skills.length - 1
+						| , 
+					else
+						| 
+		p.text-muted
+			h5: | 人事评估：
+			if cand.evaluate
+				!= cand.evaluate
+		p.text-muted
+			if cand.skills
+				p.read-more: a(href='/candidate/cand/' + cand.candid) 详细信息...
+block content
+	.page-header.bg-green.bg-inverse
+		.container
+			.p-y-lg.text-center
+				h1.display-2 人才输出.驻场支持
+					.row.m-t
+						.col-sm-6.col-sm-offset-3
+							img(src='/images/background-logo.svg' style="height:80px;width:70px")
+					.row.vcenter-md.m-t-md.styles_center
+	.container
+		.row.p-t-lg.p-b-xl
+			.col-md-3
+				.p-x-md.text-center
+					.p-x
+						img.img-responsive.img-rounded(src="/images/avatar5.jpg")
+					h4.Gerald Alvarado <br>
+						small.text-muted JAVA 架构师
+					p 精通Java开发, javaEE, JDBC, Javascript开发, jquery, Myeclipse, Eclipse, oracle, MySQL数据库开发&管理, TCP/IP;
+			.col-md-3
+				.p-x-md.text-center
+					.p-x
+						img.img-responsive.img-rounded(src="/images/avatar3.jpg")
+					h4.Gerald Alvarado <br>
+						small.text-muted JAVA 架构师
+					p 精通Java开发, javaEE, JDBC, Javascript开发, jquery, Myeclipse, Eclipse, oracle, MySQL数据库开发&管理, TCP/IP;
+			.col-md-3
+				.p-x-md.text-center
+					.p-x
+						img.img-responsive.img-rounded(src="/images/avatar5.jpg")
+					h4.Gerald Alvarado <br>
+						small.text-muted JAVA 架构师
+					p 精通Java开发, javaEE, JDBC, Javascript开发, jquery, Myeclipse, Eclipse, oracle, MySQL数据库开发&管理, TCP/IP;
+			.col-md-3
+				.p-x-md.text-center
+					.p-x
+						img.img-responsive.img-rounded(src="/images/avatar3.jpg")
+					h4.Gerald Alvarado <br>
+						small.text-muted JAVA 架构师
+					p 精通Java开发, javaEE, JDBC, Javascript开发, jquery, Myeclipse, Eclipse, oracle, MySQL数据库开发&管理, TCP/IP;
+	.container: #more.row.styles_center
+		if data.titles.length
+			.col-sm-4.col-md-3
+				h3 职位目录
+				.list-group(style='margin-top: 20px;')
+					a(href='/candidate', class=!data.title ? 'active' : false).list-group-item 全部职位
+					each cat in data.titles  
+						a(href='/candidate/' + cat.key, class=data.title && data.title.id == cat.id ? 'active' : false).list-group-item= cat.name
+			.col-sm-8.col-md-9
+				h3= data.title ? data.title.name : '全部候选人'
+				br
+				if filters.title && !data.title
+					h3.text-muted 无效职位.
+				else
+					if data.candidates.results.length
+						.blog
+							each cand in data.candidates.results
+								+candidate(cand)
+						if data.candidates.totalPages > 1
+							ul.pagination
+								if data.candidates.previous
+									li: a(href='?page=' + data.candidates.previous)
+								else
+									li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+								each p, i in data.candidates.pages
+									li(class=data.candidates.currentPage == p ? 'active' : null)
+										a(href='?page=' + (p == '...' ? (i ? data.candidates.totalPages : 1) : p ))= p
+								if data.candidates.next
+									li: a(href='?page=' + data.candidates.next): span.glyphicon.glyphicon-chevron-right
+								else
+									li.disabled: a(href='?page=' + data.candidates.totalPages)
+					else
+						if data.title
+							h3.text-muted  #{data.title.name}职位中还没有候选人.
+						else
+							h3.text-muted 还没有候选人.
+	section.contactbg
+		.row.styles_center
+			.b-t.text-center
+				h2 人才需求
+				p.lead 如果您有专业的开发人才需求，请填写下面的表单
+				.row.text-left
+					.col-md-6.col-md-offset-3
+						include ../includes/contact.pug
+		
+		

@@ -23,11 +23,18 @@ mixin post(post)
 			p.read-more: a(href='/blog/post/' + post.slug) Read more...
 
 block intro
-	.container
-		h1= data.category ? data.category.name : 'Blog'
+	br
 
 block content
-	.container: .row
+	.container: .styles_center.row
+
+		if data.categories.length
+			.col-sm-4.col-md-3
+				h3 技能列表
+				.list-group(style='margin-top: 20px;')
+					a(href='/blog', class=!data.category ? 'active' : false).list-group-item All Categories
+					each cat in data.categories
+						a(href='/blog/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
 		.col-sm-8.col-md-9
 			if filters.category && !data.category
 				h3.text-muted Invalid Category.
@@ -66,10 +73,3 @@ block content
 					else
 						h3.text-muted There are no posts yet.
 		
-		if data.categories.length
-			.col-sm-4.col-md-3
-				h2 Categories
-				.list-group(style='margin-top: 70px;')
-					a(href='/blog', class=!data.category ? 'active' : false).list-group-item All Categories
-					each cat in data.categories
-						a(href='/blog/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name

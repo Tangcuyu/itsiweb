@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="695px" height="695px" viewBox="0 0 695 695" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>flag</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="35.2286849%" x2="100%" y2="35.2286845%" id="linearGradient-1">
+            <stop stop-color="#545B6B" stop-opacity="0.755434783" offset="0%"></stop>
+            <stop stop-color="#474D5D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="38.8559473%" y1="0%" x2="17.8127548%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FAA620" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="58.4809214%" y1="30.5268892%" x2="17.8127548%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FAA620" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="170.455041%" y1="54.6022832%" x2="50%" y2="54.6022832%" id="linearGradient-4">
+            <stop stop-color="#FAA620" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="117.077275%" y1="-71.5714862%" x2="20.3261741%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FAA620" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="92.9409746%" y1="0%" x2="50%" y2="87.3550137%" id="linearGradient-6">
+            <stop stop-color="#FAA620" offset="0%"></stop>
+            <stop stop-color="#FAA21F" offset="47.0667343%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Portrait-Retina" transform="translate(-605.000000, -145.000000)">
+            <g id="flag" transform="translate(605.000000, 145.000000)">
+                <circle id="Oval-1" fill="#FFFFFF" cx="347.5" cy="347.5" r="347.5"></circle>
+                <path d="M210.566038,369.461847 L210.566038,142.522088 L166.037736,142.522088 L166.037736,369.461847 L210.566038,369.461847 Z M210.566038,391.710843 L210.566038,632 L166.037736,632 L166.037736,391.710843 L210.566038,391.710843 Z M210.566038,120.273092 L210.566038,86.9123027 C210.566038,81.9901738 206.575261,78 201.648738,78 L174.955036,78 C170.030147,78 166.037736,81.9857192 166.037736,86.9123027 L166.037736,120.273092 L210.566038,120.273092 Z" id="Rectangle-1" fill="url(#linearGradient-1)"></path>
+                <polygon id="Rectangle-2" fill="url(#linearGradient-2)" points="146 142.522088 146 184.68451 227.367835 184.68451 227.367835 391.215133 146 391.215134 146 433.983936 618 433.983936 565.454416 288.253012 618 142.522088"></polygon>
+                <polygon id="Rectangle-3" fill="url(#linearGradient-3)" points="512.374667 142.522088 402.917463 433.983936 512.374684 433.983936 618 142.522088"></polygon>
+                <polygon id="Rectangle-9" fill="url(#linearGradient-4)" opacity="0.681089044" points="441.129384 142.522088 331.67218 433.983936 402.935154 433.983936 512.424109 142.522088"></polygon>
+                <polygon id="Rectangle-10" fill="url(#linearGradient-5)" opacity="0.661089086" points="336.487875 142.522088 227.030671 433.983936 336.487891 433.983936 442.113208 142.522088"></polygon>
+                <polygon id="Rectangle-4" fill="url(#linearGradient-2)" points="512.445313 142.522088 565.454416 288.253012 618 142.522088"></polygon>
+                <polygon id="Rectangle-5" fill="url(#linearGradient-6)" opacity="0.661089086" points="512.365138 433.983936 618 433.983936 565.454416 288.253012"></polygon>
+                <path d="M166.037736,433.983936 L210.566038,433.983936 L210.566038,456.232932 L166.037736,456.232932 L166.037736,433.983936 Z M166.037736,184.795181 L210.566038,184.795181 L210.566038,207.044177 L166.037736,207.044177 L166.037736,184.795181 Z" id="Rectangle-10" fill-opacity="0.763870018" fill="#111520"></path>
+            </g>
+        </g>
+    </g>
+</svg>
