@@ -1,10 +1,11 @@
 extends ../layouts/default
-
+block css
+	link(href="/styles/site/waiwenye.css", rel="stylesheet")
 block content
-	.page-header.bg-green.bg-inverse
+	.page-header.bg-inverse(style="background: url('images/bg2.jpg') repeat;")
 		.container
 			.p-y-lg.text-center
-				h1.display-2 研发中心
+				h2.display-1 软件开发服务
 					.row.m-t
 						.col-sm-6.col-sm-offset-3
 							img(src='images/background-logo.svg' style="height:80px;width:70px")
@@ -19,6 +20,43 @@ block content
 							img(src='images/css3.svg' style="height:100px;width:80px")
 						.col-md-3
 							img(src='images/bower.svg' style="height:120px;width:100px")
+	section.bg-white
+		#intro.container.p-y-xl.b-b
+			.row
+				.col-md-6.col-md-offset-3.text-center
+					.section-tag
+						| 团队理念
+					h2(h1 display-1 m-t) 用户体验为核心
+					p 时刻从用户的角度出发去看待自己开发出来的软件产品；超出用户的预期，形成真正的用户体验；关注产品的每一个细节；
+			.row.text-center.styles_center
+				.col-md-4
+					i.ion-person-stalker.text-green.fa-4x
+					h4 从用户角度出发
+					p.text-muted 用户的习惯是开发者需要观察适应的，软件产品需要通过优秀的交互设计让用户学习
+				.col-md-4
+					i.ion-archive.text-green.fa-4x
+					h4 给用户带来惊喜
+					p.text-muted 什么叫体验？超出用户预期的才叫体验。如果用户用完后，仅仅达到了预期的效果，就不会形成真正的体验。
+				.col-md-4
+					i.ion-pie-graph.text-green.fa-4x
+					h4 用户体验从细节开始
+					p.text-muted 从用户体验的细节出发，从很多细微之处出发，能够对用户体验做出持续的改进。
+	section.p-y-xl.bg-gray
+		.container.styles_center
+			.row.m-b-md
+				.col-md-6.col-md-offset-3.text-center
+					h2(h1 display-1 m-t) 产品质量为根本
+			.row.vcenter-md.m-b-md
+				.col-md-4.col-md-offset-1.text-center.text-md-left
+					h2.h1.display-1.m-b 手机APP  
+						em.ion-social-apple-outline(style="color:green;") 
+					p.lead.m-b-lg 精致优美的用户界面；流畅的页面加载；动态的页面内容更新；
+					p.text-muted IOS平台开发; Android平台开发; Hybrid APP开发
+					p.m-b-md
+						a(class="btn btn-app btn-lg" href="/software") 详细信息
+							i.ion-ios-arrow-forward.m-l-xs
+				.col-md-4.col-md-offset-2
+					img.img-responsive(src="images/frontend_home3.png")
 	section.p-y-xl.bg-white
 		.container.styles_banner
 			.row.vcenter-md.m-b-md
@@ -32,7 +70,7 @@ block content
 							i.ion-ios-arrow-forward.m-l-xs  
 				.col-md-4.col-md-pull-3
 					img.img-responsive(src="images/frontend_home2.png")
-	section.p-y-xl.bg-white
+	section.p-y-xl.bg-gray
 		.container.styles_banner
 			.row.vcenter-md.m-b-md
 				.col-md-4.col-md-offset-1.text-center.text-md-left
@@ -45,6 +83,41 @@ block content
 							i.ion-ios-arrow-forward.m-l-xs
 				.col-md-4.col-md-offset-2
 					img.img-responsive(src="images/frontend_home4.png")
+	section.p-y-xl.bg-white
+		.container
+			.row.m-b-lg.text-center
+				.section-tag
+						| 开发模式
+				h2(h1 display-1 m-t) 敏捷开发模式
+				p
+			.row.styles_center
+				.col-md-6.hidden-sm.hidden-xs
+					img.img-responsive.img-full(src="/images/frontend_about2.svg")
+				.col-md-4.col-md-offset-1
+					ol.list-numbers
+						li
+							p.h4 挖掘用户真正需求
+							p.m-b-lg 站在用户的角度，分析问题，发掘出客户的“真正需求”，能真正帮助客户解决问题，带来真正的价值
+						li
+							p.h4 紧密沟通&协作
+							p.m-b-lg 客户是软件研发团队不可或缺的一份子，项目的成功交付离不开客户的全程参与
+						li
+							p.h4 咨询&建议
+							p.m-b-lg 结合客户的业务和管理模式，提供相关咨询服务，引导客户逐步推进，帮助您捋清思路。
+			.row.styles_center
+				.col-md-4
+					ol.list-numbers.white
+						li
+							p.h4 快速原型法
+							p.m-b-lg 通过快速原型，把需求以可视化的形式展示给客户,能够及时了解客户意见，确保对需求理解的一致性
+						li
+							p.h4 快速迭代的增量开发
+							p.m-b-lg 采用快速迭代的增量开发，把对需求的沟通和软件的优化贯穿整个开发过程，有效消除了需求理解不正确、优先级分配不当等带来的质量和效率问题
+						li
+							p.h4 交付客户满意度
+							p.m-b-lg 把自身的IT能力和学习能力当作一种工具，把解决客户的问题、交付客户满意度当成目标。
+				.col-md-6.col-md-offset-2.hidden-sm.hidden-xs
+					img.img-responsive.img-full(src="/images/frontend_about1.svg")
 	section.p-y-xl.bg-white.hidden-sm.hidden-xs
 		.container.styles_center
 			.row.m-b-md
@@ -128,11 +201,191 @@ block content
 							p.m-b 完善的系统测试保证系统的正常上线
 							a(href="javascript:void(0)") 查看成功案例
 								i.ion-ios-arrow-right.m-l-xs
+	section.container.styles__container-fluid___3f8lF
+		.styles__row___3prcF
+			.styles__col-xs-12___16jS_.styles__col-sm-10___3HknL.styles__col-md-10___3ugK9.styles__col-sm-offset-1___17e36.styles__col-md-offset-1___1Y_f-
+				.styles__recentWork___3kMw2
+					.styles__section___4Y5ff.styles__default___2Oysz
+						.styles__sectionTitle___2kwdL
+							.styles__line___2q_0Q
+							h2.h1.display-1.m-t.styles__heading3___3O02_ 我们的开源项目
+							.styles__line___2q_0Q
+						.styles__sectionContent___2CLQr
+							.styles__row___3prcF
+								.styles__col-xs-12___16jS_.styles__col-sm-6___2FmF7
+									.styles__work___29FoS 
+										.styles__work__header___7K8Hu
+											.styles__heading4___3SiAp
+												a.Tappable-inactive.styles__work__titleLink___w9T6c(style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;" href="https://github.com/Tangcuyu/webmasscan") Webmasscan
+											img.styles__work__icon___11svu(src="images/scan.svg")
+										.styles__work__content___2nrTq
+											p.styles__p___3QiVQ
+												| Webmasscan是一个极速的网络扫描工具，可以把网络扫描结果持久化在各种类型的数据库中，并可以通过图形化Web界面实时显示扫描过程和扫描结果。
+											.styles__work__labels___2Xskw
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd NODE
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd Masscan
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd Websocket
+								.styles__col-xs-12___16jS_.styles__col-sm-6___2FmF7
+									.styles__work___29FoS 
+										.styles__work__header___7K8Hu
+											.styles__heading4___3SiAp
+												a.Tappable-inactive.styles__work__titleLink___w9T6c(style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;" href="https://github.com/Tangcuyu/perfectInfo") PerfectInfo
+											img.styles__work__icon___11svu(src="images/flag1.svg")
+										.styles__work__content___2nrTq
+											p.styles__p___3QiVQ
+												| PerfectInfo充分利用数据可视化技术、物联网、WebSocket技术把物联网传感器产生的实时数据，通过WEB界面展示和交互，形成了物联网数据的可视化应用.
+											.styles__work__labels___2Xskw
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd NODE
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd KEYSTONE	
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd Express
+								.styles__col-xs-12___16jS_.styles__col-sm-6___2FmF7
+									.styles__work___29FoS 
+										.styles__work__header___7K8Hu
+											.styles__heading4___3SiAp
+												a.Tappable-inactive.styles__work__titleLink___w9T6c(style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;" href="https://github.com/Tangcuyu") H5Game+
+											img.styles__work__icon___11svu(src="images/game.svg")
+										.styles__work__content___2nrTq
+											p.styles__p___3QiVQ
+												| 基于Phaser的，兼容手机和各种主流浏览器的H5 Canvas和 WebGL游戏.
+											.styles__work__labels___2Xskw
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd NODE
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd Phaser
+								.styles__col-xs-12___16jS_.styles__col-sm-6___2FmF7
+									.styles__work___29FoS 
+										.styles__work__header___7K8Hu
+											.styles__heading4___3SiAp
+												a.Tappable-inactive.styles__work__titleLink___w9T6c(style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;" href="https://github.com/Tangcuyu") PlotMIS
+											img.styles__work__icon___11svu(src="images/plot.svg")
+										.styles__work__content___2nrTq
+											p.styles__p___3QiVQ
+												| PlotMIS是一个污染地块信息管理系统，融合了全面的污染地块治理流程和基于ARCGIS地理信息系统的全方位管理信息系统.
+											.styles__work__labels___2Xskw
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd Spring
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd ArcGIS
+												span.styles__default___VFBcO.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd AngularJS
 	section.contactbg
-		#contact.container
-			.row
-				.col-md-6.col-md-offset-3
-					h3.text-center 成功案例
-			.row.p-t-md.p-b-lg
-				.row: .col-sm-8.col-md-6.col-md-offset-3
-					include ../includes/contact.pug
+		.hezuohuoban
+			#ss.container.pad_bottom60
+				.row.text-center
+					h2(h1 display-1 m-t) 成功案例
+			.row.styles_center.pad_bottom60
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_01.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| 网络管理外包
+								.type
+									| IT服务
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_02.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| WIFI系统建设
+								.type
+									| 网络建设和管理
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_03.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| 国家质检总局12365
+								.type
+									| 网站建设
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_04.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| 法国开发署网络管理
+								.type
+									| IT服务
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_05.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| 网络管理人才外包
+								.type
+									| 人才输出
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_06.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| 桌面支持人才外包
+								.type
+									| 人才输出
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_07.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| JAVA开发人才外包
+								.type
+									| 人才输出
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_08.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| 网络管理人才外包
+								.type
+									| 人才输出
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_09.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| 桌面支持人才外包
+								.type
+									| 人才输出
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_10.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| IP电话会议系统
+								.type
+									| IT服务
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_11.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| 网络管理外包
+								.type
+									| IT服务
+				.col-xs-4.col-sm-3.col-md-2
+					a.project(href="#ss")
+						.thumbnail.animated
+							img(src="images/hzhb_logo_12.jpg")
+						.overlay
+							.meta.animated
+								.client
+									| JAVA高级人才外包
+								.type
+									| 人才输出
