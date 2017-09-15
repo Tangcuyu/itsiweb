@@ -3,24 +3,27 @@ extends ../layouts/default
 mixin post(post)
 	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
 		h2: a(href='/blog/post/' + post.slug)= post.title
-		p.lead.text-muted Posted 
+		p.text-muted 
+			if post.author
+				| #{post.author.name.first}
+			else
+				| 匿名作者
 			if post.publishedDate
-				| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+				| 于 #{post._.publishedDate.format('YYYY-MM-D日')} 
 			if post.categories && post.categories.length
-				| in 
+				| 发布在
 				each cat, i in post.categories
 					a(href='/blog/' + cat.key)= cat.name
 					if i < post.categories.length - 1
 						| , 
 					else
 						|  
-			if post.author
-				| by #{post.author.name.first}
+			
 		if post.image.exists
 			img(src=post._.image.fit(160,160)).img.pull-right
 		p!= post.content.brief
 		if post.content.extended
-			p.read-more: a(href='/blog/post/' + post.slug) Read more...
+			p.read-more: a(href='/blog/post/' + post.slug) 详细内容...
 
 block intro
 	br
@@ -30,9 +33,9 @@ block content
 
 		if data.categories.length
 			.col-sm-4.col-md-3
-				h3 技能列表
+				h3 技能分类
 				.list-group(style='margin-top: 20px;')
-					a(href='/blog', class=!data.category ? 'active' : false).list-group-item All Categories
+					a(href='/blog', class=!data.category ? 'active' : false).list-group-item 全部目录
 					each cat in data.categories
 						a(href='/blog/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
 		.col-sm-8.col-md-9
@@ -41,15 +44,16 @@ block content
 			else
 				if data.posts.results.length
 					if data.posts.totalPages > 1
-						h4.text-weight-normal Showing 
-							strong #{data.posts.first}
-							|  to 
-							strong #{data.posts.last}
-							|  of 
+						h4.text-weight-normal 此列显示所有
 							strong #{data.posts.total}
-							|  posts.
+							|  篇文章中的第
+							strong #{data.posts.first}
+							|  到第
+							strong #{data.posts.last}
+							|  篇
+							
 					else
-						h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+						h4.text-weight-normal 显示 #{utils.plural(data.posts.results.length, '* post')}.
 					.blog
 						each post in data.posts.results
 							+post(post)
@@ -69,7 +73,7 @@ block content
 								li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
 				else
 					if data.category
-						h3.text-muted There are no posts in the category #{data.category.name}.
+						h3.text-muted #{data.category.name}分类目录中还没有文章发布.
 					else
-						h3.text-muted There are no posts yet.
+						h3.text-muted 还没有文章发布.
 		

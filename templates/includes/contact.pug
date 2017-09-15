@@ -2,22 +2,53 @@ if enquirySubmitted
 	h3 非常感谢您给我们联系，我们会第一时间给您回复。
 else
 	.row
-		form(method='post', action='contact')
-			input(type='hidden', name='action', value='contact')
-			.form-group(class=validationErrors.name ? 'has-error' : null)
-				label 姓名
-				input(type='text', name='name.full', value=formData['name.full']).form-control
-			.form-group(class=validationErrors.email ? 'has-error' : null)
-				label 邮箱
-				input(type='email', name='email', value=formData.email).form-control
-			.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
-				label 您想了解些什么?
-				select(name='enquiryType').form-control
-					option(value='') (请选择)
-					each type in enquiryTypes
-						option(value=type.value, selected=formData.enquiryType == type.value)= type.label
-			.form-group(class=validationErrors.message ? 'has-error' : null)
-				label 正文
-				textarea(name='message', placeholder='在这里输入正文...' rows=4).form-control= formData.message
-			.form-actions
-				button(type='submit').btn.btn-success 发送
+		.col-md-4
+			.row
+				.styles__heading5___3SiAp.b-b
+					| 北京（总部）
+				.m-b-sm
+					.styles__work__labels___2Xskw
+						span.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd 办公地址
+					| 北京市朝阳区望京广顺南大街嘉美中心1920
+					br
+					span.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd 联系电话
+					br
+					| 010-59974483
+					br
+					span.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd 微信公众号
+					br
+					| itsigongzhong
+					br
+					span.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd Email
+					br
+					| hr@itsi.com.cn
+				.styles__heading5___3SiAp.b-b.m-t
+					| 天津分公司
+				.m-b-sm
+					.styles__work__labels___2Xskw
+						span.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd 办公地址
+					| 天津市南开区华苑产业园区开华路7号5015
+					br
+					span.styles__normal___1nLKI.styles__base___3RY55.styles__inline___3uxKd Email
+					br
+					| tj@itsi.com.cn			
+		.col-md-7.col-md-offset-1
+			form(method='post', action='contact')
+				input(type='hidden', name='action', value='contact')
+				.form-group(class=validationErrors.name ? 'has-error' : null)
+					label 姓名
+					input(type='text', name='name.full', value=formData['name.full']).form-control
+				.form-group(class=validationErrors.email ? 'has-error' : null)
+					label 邮箱
+					input(type='email', name='email', value=formData.email).form-control
+				.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
+					label 您想了解些什么?
+					select(name='enquiryType').form-control
+						option(value='') (请选择)
+						each type in enquiryTypes
+							option(value=type.value, selected=formData.enquiryType == type.value)= type.label
+				.form-group(class=validationErrors.message ? 'has-error' : null)
+					label 正文
+					textarea(name='message', placeholder='在这里输入正文...' rows=4).form-control= formData.message
+				.form-actions
+					button(type='submit').btn.btn-success 发送
