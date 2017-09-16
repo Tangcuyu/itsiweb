@@ -2,24 +2,14 @@ extends ../layouts/default
 block css
 	link(href="/styles/site/waiwenye.css", rel="stylesheet")
 block content
-	.page-header.bg-inverse(style="background: url('images/bg2.jpg') repeat;")
+	.page-header.bg-inverse(style="background: url('images/bg.jpg') repeat;")
 		.row
-			img(src='images/bg21.svg' style='position:absolute; margin-left:80px;')
+			img(src='images/bg21.svg' style='position:absolute; margin-left:150px;height:450px;width:450px;')
 		.container
 			.p-y-lg.text-center
-				h2.display-1 软件开发服务
-					.row.m-t
-						.col-sm-6.col-sm-offset-3
-							img(src='images/background-logo.svg' style="height:80px;width:70px")
-					.row.vcenter-md.m-t-md.styles_center
-						.col-md-3
-							img(src='images/swift.svg' style="height:100px;width:80px")
-						.col-md-3
-							img(src='images/xcode.svg' style="height:120px;width:100px")
-						.col-md-3
-							img(src='images/html5.svg' style="height:100px;width:80px")
-						.col-md-3
-							img(src='images/css3.svg' style="height:100px;width:80px")
+					.row.vcenter-md
+						.col-md-3.col-md-offset-7
+							img(src='images/frontend_home3.png' style="height:250px;width:280px")
 	section.bg-white
 		#intro.container.p-y-xl.b-b
 			.row
@@ -390,9 +380,6 @@ block content
 									| 人才输出
 	section.contactbg
 		#contact.container
-			.row
-				.col-md-6.col-md-offset-3
-					h3.text-center 联系我们
 			.row.p-t-md.p-b-lg
 				.row: .col-sm-8.col-md-10.col-md-offset-1
 					include ../includes/contact.pug
