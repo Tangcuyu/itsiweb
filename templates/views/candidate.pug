@@ -1,8 +1,52 @@
 extends ../layouts/default
 
 mixin candidate(cand)
-	.post(data-ks-editable=editable(user, { list: 'Candidate', id: cand.id }))
-		h4: a(href='/candidate/cand/' + cand.candid)= cand.name.first
+	.post.well.well_person(data-ks-editable=editable(user, { list: 'Candidate', id: cand.id }))
+		.col-md-12.online
+		.clear-person
+			.col-md-2.portrait
+				.prolist_img
+					a(href='/candidate/' + cand.title.key)
+						div(style="background: url('images/avatar5.jpg') no-repeat center / cover; border-radius: 100px; width: 100px; height: 100px;")
+				h4: a(href='/candidate/cand/' + cand.candid)= cand.name.first
+				.prolist-p
+					if cand.title
+						a(href='/candidate/' + cand.title.key)= cand.title.name
+			.col-md-6.name-person-line
+				.line-person-left
+					div(style="overflow: hidden;")
+						.col-md-10.pull-left.name-p
+							a(href="http://www.leyu.net/jianli/show-136.html", target="_blank")
+								if cand.publishedDate
+									| #{cand._.publishedDate.format( 'YYYY年M月D日')} 初次面试；
+					div(style="margin-top: 8px;")
+						p
+							if cand.evaluate
+							b(style="font-size: 22px;") 项目经验：
+							!= cand.evaluate
+							if cand.eduction
+							b 学历：
+							!= cand.eduction
+					div(style="margin-top: 8px;")
+						p
+							if cand.skills && cand.skills.length
+								b 专业技能：
+								each cat, i in cand.skills
+									!= cat.name
+									if i < cand.skills.length - 1
+										| , 
+									else
+										| 
+				.line-person-hr
+			.col-md-4.right-line
+				div(style="color: rgb(244, 69, 60);margin-bottom:20px;")
+					
+				div(style="margin-bottom:10px;position:relative;")
+					a.link-blue(data-toggle="popover" target="_blank" data-original-title="150319275648") 150319275648
+				p.text-muted
+					if cand.skills
+						p.read-more: a(href='/candidate/cand/' + cand.candid) 详细信息...
+		
 		p.text-muted 
 			if cand.publishedDate
 				| #{cand._.publishedDate.format( 'YYYY年M月D日')} 初次面试；   应聘  
@@ -67,6 +111,34 @@ block content
 					h4.Gerald Alvarado <br>
 						small.text-muted JAVA 架构师
 					p 精通Java开发, javaEE, JDBC, Javascript开发, jquery, Myeclipse, Eclipse, oracle, MySQL数据库开发&管理, TCP/IP;
+	.container.well.well_person
+		.col-md-12.online
+		.clear-person
+			.col-md-2.portrait
+				.prolist_img
+					a(style="overflow: hidden; display: block; max-height: 100px;" href="")
+						div(style="background: url('images/avatar5.jpg') no-repeat center / cover; border-radius: 100px; width: 100px; height: 100px;")
+					.sex
+				.prolist-p JAVA开发工程师
+			.col-md-6.name-person-line
+				.line-person-left
+					div(style="overflow: hidden;")
+						.col-md-10.pull-left.name-p
+							a(href="http://www.leyu.net/jianli/show-136.html", target="_blank") 阿里  iOS工程师  1年工作经验
+					div(style="margin-top: 8px;")
+						p
+							b 技术经验：
+							| 三年JAVA开发
+					div(style="margin-top: 8px;")
+						p
+							b 项目经验：
+							| 天津环保局项目
+				.line-person-hr
+			.col-md-4.right-line
+				div(style="color: rgb(244, 69, 60);margin-bottom:20px;")
+					b(style="font-size: 22px;")
+				div(style="margin-bottom:10px;position:relative;")
+					a.link-blue(data-toggle="popover" target="_blank" data-original-title="150319275648") 150319275648
 	.container: #more.row.styles_center
 		if data.titles.length
 			.col-sm-4.col-md-3
@@ -89,6 +161,7 @@ block content
 							ul.pagination
 								if data.candidates.previous
 									li: a(href='?page=' + data.candidates.previous)
+										span.glyphicon.glyphicon-chevron-left
 								else
 									li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
 								each p, i in data.candidates.pages
@@ -103,6 +176,8 @@ block content
 							h3.text-muted  #{data.title.name}职位中还没有候选人.
 						else
 							h3.text-muted 还没有候选人.
+		else
+			h3.text-muted 还没有候选人.
 	section.contactbg
 		.row.styles_center
 			.b-t.text-center

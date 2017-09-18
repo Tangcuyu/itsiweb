@@ -17,7 +17,7 @@ Enquiry.add({
 	phone: { type: String },
 	enquiryType: { type: Types.Select, options: [
 		{ value: 'message', label: '技术合作' },
-		{ value: 'question', label: '寻求帮助' },
+		{ value: 'question', label: '需要人才' },
 		{ value: 'other', label: '其他留言...' },
 	] },
 	message: { type: Types.Markdown, required: true },
