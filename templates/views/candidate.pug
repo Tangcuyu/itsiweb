@@ -7,146 +7,64 @@ mixin candidate(cand)
 			.col-md-2.portrait
 				.prolist_img
 					a(href='/candidate/' + cand.title.key)
-						div(style="background: url('images/avatar5.jpg') no-repeat center / cover; border-radius: 100px; width: 100px; height: 100px;")
+						if cand.image.url
+							div(style={background: 'no-repeat center /cover','background-image':'url('+ cand.image.url +')','border-radius':'100px',  width: '100px', height: '100px'}) 
+						else
+							div(style="background: url('/images/applogo10.jpeg') no-repeat center / cover; border-radius: 100px; width: 100px; height: 100px;")
 				h4: a(href='/candidate/cand/' + cand.candid)= cand.name.first
-				.prolist-p
-					if cand.title
-						a(href='/candidate/' + cand.title.key)= cand.title.name
-			.col-md-6.name-person-line
+			.col-md-4.name-person-line.vip
 				.line-person-left
-					div(style="overflow: hidden;")
-						.col-md-10.pull-left.name-p
-							a(href="http://www.leyu.net/jianli/show-136.html", target="_blank")
-								if cand.publishedDate
-									| #{cand._.publishedDate.format( 'YYYY年M月D日')} 初次面试；
-					div(style="margin-top: 8px;")
-						p
-							if cand.evaluate
-							b(style="font-size: 22px;") 项目经验：
-							!= cand.evaluate
+					div
+						p.name-p
+							if cand.title
+								a(href='/candidate/' + cand.title.key)= cand.title.name
+					div
+						p.name-p
+							if cand.experience
+								| 工作经验：
+								!= cand.experience
+								| 年
+						p.name-p
+							if cand.age
+								| 年龄：
+								!= cand.age
+							
+						p.name-p
+							if cand.level
+								| 级别：
+								!= cand.level
+				.line-person-hr
+			.col-md-6.right-line
+				.line-person-left
+					div
+						p.name-p
+							a(href='/candidate/' + cand.title.key) 毕业院校:
+								if cand.school
+									!= cand.school
+						p.name-p
 							if cand.eduction
-							b 学历：
-							!= cand.eduction
-					div(style="margin-top: 8px;")
-						p
-							if cand.skills && cand.skills.length
-								b 专业技能：
-								each cat, i in cand.skills
-									!= cat.name
-									if i < cand.skills.length - 1
-										| , 
-									else
-										| 
-				.line-person-hr
-			.col-md-4.right-line
-				div(style="color: rgb(244, 69, 60);margin-bottom:20px;")
-					
-				div(style="margin-bottom:10px;position:relative;")
-					a.link-blue(data-toggle="popover" target="_blank" data-original-title="150319275648") 150319275648
-				p.text-muted
-					if cand.skills
-						p.read-more: a(href='/candidate/cand/' + cand.candid) 详细信息...
-		
-		p.text-muted 
-			if cand.publishedDate
-				| #{cand._.publishedDate.format( 'YYYY年M月D日')} 初次面试；   应聘  
-			if cand.title
-				a(href='/candidate/' + cand.title.key)= cand.title.name
-		p
-			if cand.eduction
-			| 学       历：
-			!= cand.eduction
-		p
-			if cand.skills && cand.skills.length
-				| 专业技能：
-				each cat, i in cand.skills
-					!= cat.name
-					if i < cand.skills.length - 1
-						| , 
-					else
-						| 
-		p.text-muted
-			h5: | 人事评估：
-			if cand.evaluate
-				!= cand.evaluate
-		p.text-muted
-			if cand.skills
-				p.read-more: a(href='/candidate/cand/' + cand.candid) 详细信息...
+								| 学历：
+								!= cand.eduction
+						.name-p
+							if cand.period
+								| 可到岗时间：
+								!= cand.period
+			.text-muted
+				if cand.skills
+					a(class='btn re-btn green1 yuyue' href='/candidate/cand/' + cand.candid) 详细信息...
 block content
-	.page-header.bg-inverse(style="background: url('images/rallyhrwebheroimage-4.png') repeat;")
+	.page-header.bg-inverse(style="background: url('/images/bg.jpg') repeat;")
 		.container
-			.p-y-lg.text-center
-				h1.display-1 人才输出.驻场支持
-					.row.m-t
-						.col-sm-6.col-sm-offset-3
-							img(src='/images/background-logo.svg' style="height:80px;width:70px")
-					.row.vcenter-md.m-t-md.styles_center
-	.container
-		.row.p-t-lg.p-b-xl
-			.col-md-3
-				.p-x-md.text-center
-					.p-x
-						img.img-responsive.img-rounded(src="/images/avatar5.jpg")
-					h4.Gerald Alvarado <br>
-						small.text-muted JAVA 架构师
-					p 精通Java开发, javaEE, JDBC, Javascript开发, jquery, Myeclipse, Eclipse, oracle, MySQL数据库开发&管理, TCP/IP;
-			.col-md-3
-				.p-x-md.text-center
-					.p-x
-						img.img-responsive.img-rounded(src="/images/avatar3.jpg")
-					h4.Gerald Alvarado <br>
-						small.text-muted JAVA 架构师
-					p 精通Java开发, javaEE, JDBC, Javascript开发, jquery, Myeclipse, Eclipse, oracle, MySQL数据库开发&管理, TCP/IP;
-			.col-md-3
-				.p-x-md.text-center
-					.p-x
-						img.img-responsive.img-rounded(src="/images/avatar5.jpg")
-					h4.Gerald Alvarado <br>
-						small.text-muted JAVA 架构师
-					p 精通Java开发, javaEE, JDBC, Javascript开发, jquery, Myeclipse, Eclipse, oracle, MySQL数据库开发&管理, TCP/IP;
-			.col-md-3
-				.p-x-md.text-center
-					.p-x
-						img.img-responsive.img-rounded(src="/images/avatar3.jpg")
-					h4.Gerald Alvarado <br>
-						small.text-muted JAVA 架构师
-					p 精通Java开发, javaEE, JDBC, Javascript开发, jquery, Myeclipse, Eclipse, oracle, MySQL数据库开发&管理, TCP/IP;
-	.container.well.well_person
-		.col-md-12.online
-		.clear-person
-			.col-md-2.portrait
-				.prolist_img
-					a(style="overflow: hidden; display: block; max-height: 100px;" href="")
-						div(style="background: url('images/avatar5.jpg') no-repeat center / cover; border-radius: 100px; width: 100px; height: 100px;")
-					.sex
-				.prolist-p JAVA开发工程师
-			.col-md-6.name-person-line
-				.line-person-left
-					div(style="overflow: hidden;")
-						.col-md-10.pull-left.name-p
-							a(href="http://www.leyu.net/jianli/show-136.html", target="_blank") 阿里  iOS工程师  1年工作经验
-					div(style="margin-top: 8px;")
-						p
-							b 技术经验：
-							| 三年JAVA开发
-					div(style="margin-top: 8px;")
-						p
-							b 项目经验：
-							| 天津环保局项目
-				.line-person-hr
-			.col-md-4.right-line
-				div(style="color: rgb(244, 69, 60);margin-bottom:20px;")
-					b(style="font-size: 22px;")
-				div(style="margin-bottom:10px;position:relative;")
-					a.link-blue(data-toggle="popover" target="_blank" data-original-title="150319275648") 150319275648
-	.container: #more.row.styles_center
+			.col-sm-3.p-l-lg
+				img(src='/images/hr.svg').p-l
+	.container: row.styles_center#italent
 		if data.titles.length
 			.col-sm-4.col-md-3
-				h3 职位目录
+				h3 目录
 				.list-group(style='margin-top: 20px;')
-					a(href='/candidate', class=!data.title ? 'active' : false).list-group-item 全部职位
+					a(href='/candidate' + '#italent', class=!data.title ? 'active' : false).list-group-item 全部职位
 					each cat in data.titles  
-						a(href='/candidate/' + cat.key, class=data.title && data.title.id == cat.id ? 'active' : false).list-group-item= cat.name
+						a(href='/candidate/' + cat.key + '#italent', class=data.title && data.title.id == cat.id ? 'active' : false).list-group-item= cat.name
 			.col-sm-8.col-md-9
 				h3= data.title ? data.title.name : '全部候选人'
 				br
@@ -179,12 +97,9 @@ block content
 		else
 			h3.text-muted 还没有候选人.
 	section.contactbg
-		.row.styles_center
-			.b-t.text-center
-				h2 人才需求
-				p.lead 如果您有专业的开发人才需求，请填写下面的表单
-				.row.text-left
-					.col-md-6.col-md-offset-3
-						include ../includes/contact.pug
+		#contact.container
+			.row.p-t-md.p-b-lg
+				.row: .col-sm-8.col-md-10.col-md-offset-1
+					include ../includes/contact.pug
 		
 		

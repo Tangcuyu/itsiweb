@@ -33,7 +33,7 @@ Candidate.add({
     eduction: {type: Types.Select, options: '博士,硕士,本科,专科,高中', label: '学历'},
     experience: {type: Types.Number, label: '工作经验'},
     mobile: {type: Types.Number, label:'手机号码'},
-    period: { type: Types.Select, options: [{value:'draft',label:'待定'},{value:'week',label:'一周之内'},{value:'month',label:'一月之内'},{value:'ontime',label:'随时'}], label:'预计入职时间'},
+    period: { type: Types.Select, options: [{value:'待定',label:'待定'},{value:'一周',label:'一周之内'},{value:'一个月',label:'一月之内'},{value:'随时',label:'随时'}], label:'预计入职时间'},
     evaluate: {type: Types.Html, wysiwyg: true, height: 150, label:'初试评价' },
     precustomer: {type: Types.Relationship, required: true, default:'未推荐', ref: 'Customer', label:'推荐客户'}
 	
@@ -49,8 +49,8 @@ Candidate.schema.virtual('canAccessKeystone').get(function() {
  * Relationships
  */
 
-Candidate.relationship({ ref: 'Post', path: 'author' });
-Candidate.relationship({ ref: 'Customer', path: 'author' });
+Candidate.relationship({ ref: 'Post', refPath: 'author' });
+Candidate.relationship({ ref: 'Customer', refPath: 'CustomerName' });
 
 
 

@@ -23,8 +23,7 @@ exports.initLocals = function (req, res, next) {
 		{ label: '软件开发', key: 'software', href: '/software' },
 		{ label: '人才服务', key: 'candidate', href: '/candidate' },
 		{ label: 'Open-Knowledge', key: 'blog', href: '/blog' },
-		{ label: '加入我们', key: 'blog', href: '/blog' },
-		{ label: '关于我们', key: 'contact', href: '/contact' },
+		{ label: '加入我们', key: 'join', href: '/join' },
 	];
 	res.locals.user = req.user;
 	next();
