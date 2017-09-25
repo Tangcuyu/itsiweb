@@ -79,7 +79,7 @@ input[type="search"]:focus { width: 80%; background: none repeat scroll 0 0 padd
 .margin-person{ margin-top:23px;}
 .right-line{ padding-right:3%; padding-left:3%;}
 .line-person-left{width:94%; float:left; margin-bottom:1em;}
-.line-person-hr{ padding:0; margin:0; float:right;min-height:200px; border-right:solid 1px #d9d9d9;}
+.line-person-hr{ padding:0; margin:0; float:right;min-height:150px; border-right:solid 1px #d9d9d9;}
 
 .personlist_date{ vertical-align:middle; perspective-origin:center; margin-left:3%;}
 .personlist_date p{ margin:0; }
