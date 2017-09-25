@@ -10,8 +10,8 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	'name': 'iTalent Incubator',
-	'brand': 'iTalent Incubator',
+	'name': 'ITSI',
+	'brand': 'ITSI',
 
 	'less': 'public',
 	'static': 'public',
