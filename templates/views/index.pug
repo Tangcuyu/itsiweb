@@ -1,10 +1,11 @@
 extends ../layouts/default
 
 block content
+	// - Show banner on normal screen
 	figure(class="banner" data-height="650" style="background: url('images/bg.jpg') repeat;")
 		figcaption(class="banner-caption")
-			.container
-				.slider.single-item
+			.container.styles__container-fluid___3f8lF
+				.slider.single-item.vcenter-sm
 					.styles_banner
 						img(class="styles__logo___1lCjA" src="/images/itsilogo-circle-1.png"  alt="")
 						.styles__hero__title___DH178
@@ -33,11 +34,21 @@ block content
 						.styles__hero__buttons___2QWHq
 								a(class="btn btn-app btn-lg"  href="#contact") 需要人才  
 								a(class="styles__hero__button__secondary___uUXA2" href="/candidate") or 详细了解...
+	// - Show banner on mobile phone
+	.container.xbanner.styles__container-fluid___3f8lF
+				img(class="styles__logo___1lCjA" src="/images/itsilogo-circle-1.png"  alt="")
+				p.styles__heading1___yx_UY 软件设计.开发.交付
+				.styles__hero__subtitle___uMSim
+					| 我们提供专业的软件系统设计、开发和交付服务；基于组件化和高效安全的快速开发平台,
+					| 我们为客户提供移动互联网环境下的新一代的APP、软件产品和信息管理系统。
+				.styles__hero__buttons___2QWHq
+					a(class="btn btn-app btn-lg"  href="#contact") 联系我们  
+					a(class="styles__hero__button__secondary___uUXA2" href="/software") or 详细了解...
 	section.styles__banner___1Bh99
 		.styles__banner__bg__1___zkYQ6.styles__banner__bg___3aOiu.styles__center___ITgBO
 		.styles__banner__bg__2___3f-vf.styles__banner__bg___3aOiu.styles__center___ITgBO
-		.container.styles_center
-			.row
+		.container.styles_center.styles__container-fluid___3f8lF
+			.row.styles_center
 					.styles__col-xs-12___16jS_.styles__col-sm-10___3HknL.styles__col-md-8___3HA8K.styles__col-sm-offset-1___17e36.styles__col-md-offset-2___3f0ag
 						.styles__section___4Y5ff.styles__large___4rfhu
 								p.styles__p___3QiVQ.styles__lead___2ugqp
@@ -62,70 +73,70 @@ block content
 	section.bg-gray.styles__banner___1Bh99
 		.styles__banner__bg__1___zkYQ6.styles__banner__bg___3aOiu.styles__center___ITgBO
 		.styles__banner__bg__2___3f-vf.styles__banner__bg___3aOiu.styles__center___ITgBO
-		.container.styles_center
-			.row
+		.container.styles_center.styles__container-fluid___3f8lF
+			.row.styles_center
 				.text-center.m-b-lg
 					h2.display-1 技术岗位人才
 				.row.m-t-lg.m-b-lg
 					.col-xs-6.col-sm-3
-						a.card.hover-shadow-3(href="candidate#italent")
+						a.card.hover-shadow-3(href="candidate#icatalog")
 							.card-block.b-b.text-center
 								i.ion-ios-game-controller-a-outline.fa-3x
 							.card-block.bg-gray-lighter-o
 								span UI/UE设计师
 									span.badge.badge-purple.pull-right 5
 					.col-xs-6.col-sm-3
-						a.card.hover-shadow-3(href="candidate#italent")
+						a.card.hover-shadow-3(href="candidate#icatalog")
 							.card-block.b-b.text-center
 								i.ion-ios-keypad-outline.fa-3x
 							.card-block.bg-gray-lighter-o
 								span 资深软件架构师
 									span.badge.badge-purple.pull-right 3
 					.col-xs-6.col-sm-3
-						a.card.hover-shadow-3(href="candidate#italent")
+						a.card.hover-shadow-3(href="candidate#icatalog")
 							.card-block.b-b.text-center
 								i.ion-social-github-outline.fa-3x
 							.card-block.bg-gray-lighter-o
 								span JAVA开发工程师
 									span.badge.badge-purple.pull-right 30
 					.col-xs-6.col-sm-3
-						a.card.hover-shadow-3(href="candidate#italent")
+						a.card.hover-shadow-3(href="candidate#icatalog")
 							.card-block.b-b.text-center
 								i.ion-log-in.fa-3x
 							.card-block.bg-gray-lighter-o
 								span 数据可视化开发工程师
 									span.badge.badge-purple.pull-right 8
 					.col-xs-6.col-sm-3
-						a.card.hover-shadow-3(href="candidate#italent")
+						a.card.hover-shadow-3(href="candidate#icatalog")
 							.card-block.b-b.text-center
 								i.ion-social-sass.fa-3x
 							.card-block.bg-gray-lighter-o
 								span 前端开发工程师
 									span.badge.badge-purple.pull-right 12
 					.col-xs-6.col-sm-3
-						a.card.hover-shadow-3(href="candidate#italent")
+						a.card.hover-shadow-3(href="candidate#icatalog")
 							.card-block.b-b.text-center
 								i.ion-social-apple-outline.fa-3x
 							.card-block.bg-gray-lighter-o
 								span IOS开发工程师
 									span.badge.badge-purple.pull-right 7
 					.col-xs-6.col-sm-3
-						a.card.hover-shadow-3(href="candidate#italent")
+						a.card.hover-shadow-3(href="candidate#icatalog")
 							.card-block.b-b.text-center
 								i.ion-social-android-outline.fa-3x
 							.card-block.bg-gray-lighter-o
 								span 安卓开发工程师
 									span.badge.badge-purple.pull-right 16
 					.col-xs-6.col-sm-3
-						a.card.hover-shadow-3(href="candidate#italent")
+						a.card.hover-shadow-3(href="candidate#icatalog")
 							.card-block.b-b.text-center
 								i.ion-social-nodejs.fa-3x
 							.card-block.bg-gray-lighter-o
 								span 全栈开发工程师
 									span.badge.badge-purple.pull-right 3
 	section.contactbg
-		#contact.container
-			.row.p-t-md.p-b-lg
+		#contact.container.styles__container-fluid___3f8lF
+			.row.p-t-md.p-b-lg.styles_center
 				.row: .col-sm-8.col-md-10.col-md-offset-1
 					include ../includes/contact.pug
 

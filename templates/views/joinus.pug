@@ -1,14 +1,14 @@
 extends ../layouts/default
 
 block content
-	.page-header.bg-inverse(style="background: url('images/bg.jpg') repeat;")
+	.page-header.banner.styles__container-fluid___3f8lF.bg-inverse(style="background: url('images/bg.jpg') repeat;")
 		.container
 			.col-md-3.col-md-offset-1
 				img(src='images/j1.png')
 	section.bg-white
-		#intro.container.p-y-xl.b-b
+		#intro.container.p-y-xl.b-b.styles__container-fluid___3f8lF
 			.row
-				.col-md-6.col-md-offset-3.text-center
+				.col-md-6.col-md-offset-3.text-center.lead
 					p.text-muted
 						| 娱信互动，一家由崇尚“努力学习，快乐生活”的人组成的公司
 					p.text-muted
@@ -18,12 +18,12 @@ block content
 					p.text-muted
 						| 那么来吧，加入我们一起享受快乐的工作和生活！
 	section.p-y-xl.bg-gray
-		.container.styles_center
-			.row.m-b-md
+		.container.styles_center.styles__container-fluid___3f8lF
+			.row.m-b-md.styles_center
 				.col-md-6.col-md-offset-3.text-center
 					h2(h1 display-1 m-t) 薪酬与福利
 					p.text-muted 为你提供优厚的薪酬和完善的福利，才是享受快乐生活的坚强后盾和有力保障
-			.row.m-y
+			.row.m-y.styles_center
 				.col-sm-6.col-lg-3
 					a(class="card hover-shadow-3 text-center" href="javascript:void(0)")
 						.card-header
@@ -135,7 +135,7 @@ block content
 										td
 											| 入职转正贺礼								
 	section.contactbg
-		#contact.container
-			.row.p-t-md.p-b-lg
+		#contact.container.styles__container-fluid___3f8lF
+			.row.p-t-md.p-b-lg.styles_center
 				.row: .col-sm-8.col-md-10.col-md-offset-1
 					include ../includes/contact.pug

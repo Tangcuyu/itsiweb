@@ -7530,13 +7530,14 @@ code {
 }
 
 .lead {
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.45;
 }
 
-@media (min-width: 768px) {
+
+@media (max-width: 768px) {
 	.lead {
-		font-size: 22px;
+		font-size: 16px;
 	}
 }
 

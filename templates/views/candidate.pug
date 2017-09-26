@@ -1,12 +1,12 @@
 extends ../layouts/default
 
 mixin candidate(cand)
-	.post.well.well_person(data-ks-editable=editable(user, { list: 'Candidate', id: cand.id }))
+	.well.banner.well_person(data-ks-editable=editable(user, { list: 'Candidate', id: cand.id }))
 		.col-md-12.online
 		.clear-person
 			.col-md-2.portrait
 				.prolist_img
-					a(href='/candidate/' + cand.title.key)
+					a(href='/candidate/cand/' + cand.candid)
 						if cand.image.url
 							div(style={background: 'no-repeat center /cover','background-image':'url('+ cand.image.url +')','border-radius':'100px',  width: '100px', height: '100px'}) 
 						else
@@ -17,7 +17,7 @@ mixin candidate(cand)
 					div
 						p.name-p
 							if cand.title
-								a(href='/candidate/' + cand.title.key)= cand.title.name
+								a(href='/candidate/' + cand.title.key +'#italent')= cand.title.name
 					div
 						p.name-p
 							if cand.experience
@@ -38,7 +38,7 @@ mixin candidate(cand)
 				.line-person-left
 					div
 						p.name-p
-							a(href='/candidate/' + cand.title.key) 毕业院校:
+							a(href='/candidate/cand/' + cand.candid) 毕业院校:
 								if cand.school
 									!= cand.school
 						p.name-p
@@ -52,20 +52,57 @@ mixin candidate(cand)
 			.text-muted
 				if cand.skills
 					a(class='btn re-btn green1 yuyue' href='/candidate/cand/' + cand.candid) 详细信息...
+	// -  For mobile phone
+	.xbanner.post(data-ks-editable=editable(user, { list: 'Candidate', id: cand.id }))
+		p.name-p
+			if cand.title
+				hr
+		.col-sm-4
+			div
+				a(href='/candidate/cand/' + cand.candid)
+							if cand.image.url
+								div(style={background: 'no-repeat center /cover','background-image':'url('+ cand.image.url +')','border-radius':'100px',  width: '100px', height: '100px'}) 
+							else
+								div(style="background: url('/images/applogo10.jpeg') no-repeat center / cover; border-radius: 100px; width: 100px; height: 100px;")
+							h4: a(href='/candidate/cand/' + cand.candid)= cand.name.first
+		.col-sm-8
+			div
+				p.name-p
+					if cand.experience
+								| 工作经验：
+								!= cand.experience
+								| 年
+				p.name-p
+					if cand.age
+								| 年龄：
+								!= cand.age
+							
+				p.name-p
+					if cand.level
+								| 级别：
+								!= cand.level
 block content
-	.page-header.bg-inverse(style="background: url('/images/bg1.jpg') repeat;")
+	.page-header.banner.bg-inverse(style="background: url('/images/bg1.jpg') repeat;")
 		.container
 			.col-sm-3.p-l-lg
 				img(src='/images/hr.svg').p-l
-	.container: row.styles_center#italent
+	.container.xbanner.styles__container-fluid___3f8lF
+				img(class="styles__logo___1lCjA" src="/images/itsilogo-bluecircle.png"  alt="")
+				p.styles__heading1___yx_UY 人才输出.驻场支持
+				.styles__hero__subtitle___uMSim
+					| 客户通过我们提供的人才输出和外包服务，可以招聘到许多从其他渠道难以找到的精通专业技能、富有责任心的高质量专业IT开发人才
+				.styles__hero__buttons___2QWHq
+					a(class="btn btn-app btn-lg"  href="#contact") 需要人才  
+					a(class="styles__hero__button__secondary___uUXA2" href="/candidate#italent") or 详细了解...
+	.container: .row.styles__container-fluid___3f8lF.styles_center
 		if data.titles.length
-			.col-sm-4.col-md-3
+			.col-sm-4.col-md-3#icatalog
 				h3 目录
 				.list-group(style='margin-top: 20px;')
 					a(href='/candidate' + '#italent', class=!data.title ? 'active' : false).list-group-item 全部职位
 					each cat in data.titles  
 						a(href='/candidate/' + cat.key + '#italent', class=data.title && data.title.id == cat.id ? 'active' : false).list-group-item= cat.name
-			.col-sm-8.col-md-9
+			.col-sm-12.col-md-9#italent
 				h3= data.title ? data.title.name : '全部候选人'
 				br
 				if filters.title && !data.title
@@ -89,6 +126,7 @@ block content
 									li: a(href='?page=' + data.candidates.next +'#italent'): span.glyphicon.glyphicon-chevron-right
 								else
 									li.disabled: a(href='?page=' + data.candidates.totalPages +'#italent')
+									span.entypo.glyphicon.glyphicon-chevron-right
 					else
 						if data.title
 							h3.text-muted  暂时没有候选人.
@@ -97,8 +135,8 @@ block content
 		else
 			h3.text-muted 还没有候选人.
 	section.contactbg
-		#contact.container
-			.row.p-t-md.p-b-lg
+		#contact.container.styles__container-fluid___3f8lF
+			.row.p-t-md.p-b-lg.styles_center
 				.row: .col-sm-8.col-md-10.col-md-offset-1
 					include ../includes/contact.pug
 		
