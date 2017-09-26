@@ -51,7 +51,7 @@ html
 									span.icon-bar
 									span.icon-bar
 								//- Header logo
-								a(class="navbar-brand" href="javascript:void(0)")
+								a(class="navbar-brand" href="/")
 									img(class="img-responsive" src="/images/logo-cn.png" title="ITSI" alt="ITSI")
 							#header-navbar-collapse.collapse.navbar-collapse
 								//- Header search form
@@ -90,6 +90,9 @@ html
 
 					//- The content block should contain the body of your template's content
 					block content
+				
+				// - 返回顶部
+				#goTop.goTop
 
 
 				//- FOOTER
@@ -123,6 +126,7 @@ html
 			script(src='/keystone/js/content/editor.js')
 
 		//- Add scripts that are globally required by your site here.
+		script(src='/js/appui/gotoTop.js')
 
 		//- Include template-specific javascript files by extending the js block
 		block js
