@@ -37,23 +37,12 @@ block content
 				.list-group(style='margin-top: 20px;')
 					a(href='/blog', class=!data.category ? 'active' : false).list-group-item 全部目录
 					each cat in data.categories
-						a(href='/blog/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
-		.col-sm-8.col-md-9
+						a(href='/blog/' + cat.key + '#postlist', class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
+		.col-sm-8.col-md-9#postlist
 			if filters.category && !data.category
 				h3.text-muted Invalid Category.
 			else
 				if data.posts.results.length
-					if data.posts.totalPages > 1
-						h4.text-weight-normal 此列显示所有
-							strong #{data.posts.total}
-							|  篇文章中的第
-							strong #{data.posts.first}
-							|  到第
-							strong #{data.posts.last}
-							|  篇
-							
-					else
-						h4.text-weight-normal 显示 #{utils.plural(data.posts.results.length, '* post')}.
 					.blog
 						each post in data.posts.results
 							+post(post)
