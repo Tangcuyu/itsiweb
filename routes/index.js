@@ -41,6 +41,7 @@ exports = module.exports = function (app) {
 	app.get('/candidate/cand/:candid', routes.views.cand);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
+	app.post('/contact', routes.views.contact);
 	app.all('/joinus', routes.views.joinus);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
