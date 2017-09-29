@@ -51,6 +51,7 @@ keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
 	enquiries: 'enquiries',
 	users: 'users',
+	candidates: ['candidates', 'title-categories', 'skill-categories', 'customers'],
 });
 
 // Start Keystone to connect to your database and initialise the web server

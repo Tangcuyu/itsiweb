@@ -35,7 +35,7 @@ Candidate.add({
     mobile: {type: Types.Number, label:'手机号码'},
     period: { type: Types.Select, options: [{value:'待定',label:'待定'},{value:'一周',label:'一周之内'},{value:'一个月',label:'一月之内'},{value:'随时',label:'随时'}], label:'预计入职时间'},
     evaluate: {type: Types.Html, wysiwyg: true, height: 150, label:'初试评价' },
-    precustomer: {type: Types.Relationship, required: true, default:'未推荐', ref: 'Customer', label:'推荐客户'}
+    precustomer: {type: Types.Relationship, required: false, default:'未推荐', ref: 'Customer', label:'推荐客户'}
 	
 });
 

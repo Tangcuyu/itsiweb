@@ -17,6 +17,6 @@ TitleCategory.add({
 	name: { type: String, required: true, label:'职位分类' }
 });
 
-TitleCategory.relationship({ ref: 'Candidate', path: 'title' });
+TitleCategory.relationship({ ref: 'Candidate',path: 'candidates', refPath: 'title' });
 
 TitleCategory.register();

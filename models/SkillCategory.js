@@ -17,6 +17,6 @@ SkillCategory.add({
 	name: { type: String, required: true, label:'专业技能名称' }
 });
 
-SkillCategory.relationship({ ref: 'Candidate', path: 'skills' });
+SkillCategory.relationship({ ref: 'Candidate', path: 'candidates', refPath: 'skills' });
 
 SkillCategory.register();

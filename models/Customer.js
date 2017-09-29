@@ -29,8 +29,8 @@ Customer.add({
  * Relationships
  */
 
-Customer.relationship({ ref: 'worksheet', path: 'username' });
-Customer.relationship({ ref: 'Candidate', path: 'precustomer' });
+// Customer.relationship({ ref: 'worksheet', refPath: 'username' });
+Customer.relationship({ ref: 'Candidate', path:'candidates', refPath: 'precustomer' });
 
 
 /**
