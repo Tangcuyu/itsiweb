@@ -2,10 +2,12 @@ extends ../layouts/default
 block css
 	link(href="/styles/site/waiwenye.css", rel="stylesheet")
 block content
+	// - Show banner on normal screen
 	.page-header.banner.bg-inverse(style="background: url('images/bg.jpg') repeat;")
 		.container
 			.col-md-3.col-md-offset-1
 				img(src='images/xuqiu.png')
+	// - Show banner on mobile
 	.container.xbanner.styles__container-fluid___3f8lF
 		img(class="styles__logo___1lCjA" src="/images/itsilogo.png" alt="")
 		p.styles__heading1___yx_UY.m-t 敏捷开发模式
