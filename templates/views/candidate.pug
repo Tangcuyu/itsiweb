@@ -111,7 +111,8 @@ block content
 						.blog
 							each cand in data.candidates.results
 								+candidate(cand)
-						if data.candidates.totalPages > 1
+						- console.log(data.candidates);
+						if data.candidates.totalPages > 1 && !(data.candidates.previous == false && data.candidates.last < 5)
 							ul.pagination
 								if data.candidates.previous
 									li: a(href='?page=' + data.candidates.previous +'#italent')

@@ -44,7 +44,10 @@ block content
 					.blog.p-t
 						each post in data.posts.results
 							+post(post)
-					if data.posts.totalPages > 1 && data.posts.last > 1
+					- console.log(data.posts);
+					- console.log(data.posts.total);
+					- console.log(data.posts.results.length);
+					if data.posts.totalPages > 1 && !(data.posts.previous == false && data.posts.last < 5)
 							ul.pagination
 								if data.posts.previous
 									li: a(href='?page=' + data.posts.previous): span.glyphicon.ion-ios-arrow-back
