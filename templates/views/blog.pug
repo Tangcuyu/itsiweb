@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 mixin post(post)
-	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+	.well.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
 		h2: a(href='/blog/post/' + post.slug)= post.title
 		p.text-muted 
 			if post.author
@@ -20,7 +20,7 @@ mixin post(post)
 						|  
 			
 		if post.image.exists
-			img(src=post._.image.fit(160,160)).img.pull-right
+			img(src=post._.image.fit(160,160)).img
 		p!= post.content.brief
 		if post.content.extended
 			p.read-more: a(href='/blog/post/' + post.slug) 详细内容...
@@ -30,20 +30,18 @@ block intro
 
 block content
 	.container: .styles_center.row
-
 		if data.categories.length
 			.col-sm-4.col-md-3
-				h3 技能分类
 				.list-group(style='margin-top: 20px;')
 					a(href='/blog', class=!data.category ? 'active' : false).list-group-item 全部目录
 					each cat in data.categories
 						a(href='/blog/' + cat.key + '#postlist', class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
 		.col-sm-8.col-md-9#postlist
 			if filters.category && !data.category
-				h3.text-muted Invalid Category.
+				h3.text-muted  没有这个分类.
 			else
 				if data.posts.results.length
-					.blog
+					.blog.p-t
 						each post in data.posts.results
 							+post(post)
 					
