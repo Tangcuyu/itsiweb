@@ -44,20 +44,20 @@ block content
 					.blog.p-t
 						each post in data.posts.results
 							+post(post)
+					if data.posts.totalPages > 1 && data.posts.last > 1
+							ul.pagination
+								if data.posts.previous
+									li: a(href='?page=' + data.posts.previous): span.glyphicon.ion-ios-arrow-back
+								else
+									li.disabled: a(href='?page=' + 1): span.glyphicon.ion-ios-arrow-back
+								each p, i in data.posts.pages
+									li(class=data.posts.currentPage == p ? 'active' : null)
+										a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
+								if data.posts.next
+									li: a(href='?page=' + data.posts.next): span.glyphicon.ion-ios-arrow-forward
+								else
+									li.disabled: a(href='?page=' + data.posts.totalPages): span.glyphicon.glyphicon.ion-ios-arrow-forward
 					
-					if data.posts.totalPages > 1
-						ul.pagination
-							if data.posts.previous
-								li: a(href='?page=' + data.posts.previous): span.glyphicon.ion-ios-arrow-back
-							else
-								li.disabled: a(href='?page=' + 1): span.glyphicon.ion-ios-arrow-back
-							each p, i in data.posts.pages
-								li(class=data.posts.currentPage == p ? 'active' : null)
-									a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
-							if data.posts.next
-								li: a(href='?page=' + data.posts.next): span.glyphicon.ion-ios-arrow-forward
-							else
-								li.disabled: a(href='?page=' + data.posts.totalPages): span.glyphicon.glyphicon.ion-ios-arrow-forward
 				else
 					if data.category
 						h3.text-muted #{data.category.name}分类目录中还没有文章发布.
