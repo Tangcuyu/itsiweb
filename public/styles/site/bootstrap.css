@@ -291,17 +291,11 @@ th {
 	}
 }
 
-@font-face {
-	font-family: 'Glyphicons Halflings';
-	src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot")/*tpa=http://singer-amanda-54577.netlify.com/html/assets/fonts/bootstrap/glyphicons-halflings-regular.eot*/;
-	src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot-#iefix")/*tpa=http://singer-amanda-54577.netlify.com/html/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix*/ format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2")/*tpa=http://singer-amanda-54577.netlify.com/html/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2*/ format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff")/*tpa=http://singer-amanda-54577.netlify.com/html/assets/fonts/bootstrap/glyphicons-halflings-regular.woff*/ format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf")/*tpa=http://singer-amanda-54577.netlify.com/html/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf*/ format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")/*tpa=http://singer-amanda-54577.netlify.com/html/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular*/ format("svg");
-}
-
 .glyphicon {
 	position: relative;
 	top: 1px;
 	display: inline-block;
-	font-family: 'Glyphicons Halflings';
+	font-family: 'Ionicons';
 	font-style: normal;
 	font-weight: normal;
 	line-height: 1;
@@ -5186,7 +5180,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 
 .pagination {
-	display: inline-block;
 	padding-left: 0;
 	margin: 24px 0;
 	border-radius: 3px;

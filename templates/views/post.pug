@@ -3,6 +3,7 @@ extends ../layouts/default
 block content
 	.container: .row.styles_center
 		article
+			br
 			p: a(href='/blog') &larr; 返回
 			hr
 			if !data.post
@@ -27,5 +28,5 @@ block content
 									|  
 				.post
 					if data.post.image.exists
-						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
+						.image-wrap: a(href=data.post.image.url data-lightbox="example-1"): img(src=data.post._.image.fit(750,450)).img-responsive
 					!= data.post.content.full
