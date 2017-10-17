@@ -93,7 +93,7 @@ block content
 					| 客户通过我们提供的人才输出和外包服务，可以招聘到许多从其他渠道难以找到的精通专业技能、富有责任心的高质量专业IT开发人才
 				.styles__hero__buttons___2QWHq
 					a(class="btn btn-app btn-lg"  href="#contact") 需要人才  
-	.container: .row.styles__container-fluid___3f8lF.styles_center
+	.container: .styles_center.row
 		if data.titles.length
 			.col-sm-4.col-md-3#icatalog
 				h3 目录
@@ -101,7 +101,7 @@ block content
 					a(href='/candidate' + '#italent', class=!data.title ? 'active' : false).list-group-item 全部职位
 					each cat in data.titles  
 						a(href='/candidate/' + cat.key + '#italent', class=data.title && data.title.id == cat.id ? 'active' : false).list-group-item= cat.name
-			.col-sm-12.col-md-9#italent
+			.col-sm-8.col-md-9#italent
 				h3= data.title ? data.title.name : '全部候选人'
 				br
 				if filters.title && !data.title
@@ -111,7 +111,6 @@ block content
 						.blog
 							each cand in data.candidates.results
 								+candidate(cand)
-						- console.log(data.candidates);
 						if data.candidates.totalPages > 1 && !(data.candidates.previous == false && data.candidates.last < 5)
 							ul.pagination
 								if data.candidates.previous

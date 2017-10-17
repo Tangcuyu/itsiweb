@@ -69,7 +69,7 @@ exports = module.exports = function(req, res) {
 		var q = keystone.list('Candidate').paginate({
 				page: req.query.page || 1,
 				perPage: 5,
-				maxPages: 3
+				maxPages: 4
 			})
 			.where('state', 'published')
 			.sort('-publishedDate')
