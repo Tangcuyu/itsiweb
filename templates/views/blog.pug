@@ -49,18 +49,18 @@ block content
 								if data.posts.previous
 									li: a(href='?page=' + data.posts.previous): span.glyphicon.ion-ios-arrow-back
 								else
-									li.disabled: a(href='?page=' + 1): span.glyphicon.ion-ios-arrow-back
+									li.disabled: span.glyphicon.ion-ios-arrow-back
 								each p, i in data.posts.pages
 									li(class=data.posts.currentPage == p ? 'active' : null)
 										a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
 								if data.posts.next
 									li: a(href='?page=' + data.posts.next): span.glyphicon.ion-ios-arrow-forward
 								else
-									li.disabled: a(href='?page=' + data.posts.totalPages): span.glyphicon.glyphicon.ion-ios-arrow-forward
+									li.disabled: span.glyphicon.glyphicon.ion-ios-arrow-forward
 					
 				else
 					if data.category
-						h3.text-muted #{data.category.name}分类目录中还没有文章发布.
+						h3.text-muted 没有文章呢.
 					else
 						h3.text-muted 还没有文章发布.
 		
