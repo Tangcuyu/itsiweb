@@ -26,9 +26,11 @@ mixin post(post)
 			p.read-more: a(href='/blog/post/' + post.slug) 详细内容...
 
 block intro
-	br
 
 block content
+	// - Show banner on normal screen
+	.banner.m-b
+				img(src="/images/openknowledge.png"  alt="")
 	.container: .styles_center.row
 		if data.categories.length
 			.col-sm-4.col-md-3
