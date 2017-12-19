@@ -10,8 +10,8 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	'name': 'ITSI',
-	'brand': 'ITSI',
+	'name': 'WebMassIP',
+	'brand': 'WebMassIP',
 
 	'less': 'public',
 	'static': 'public',
@@ -48,10 +48,10 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-	posts: ['posts', 'post-categories'],
-	enquiries: 'enquiries',
-	users: 'users',
-	candidates: ['candidates', 'title-categories', 'skill-categories', 'customers'],
+	IP地址: ['posts', 'post-categories'],
+	子网信息: 'enquiries',
+	扫描信息: 'users',
+	用户信息: ['candidates', 'title-categories', 'skill-categories', 'customers'],
 });
 
 // Start Keystone to connect to your database and initialise the web server

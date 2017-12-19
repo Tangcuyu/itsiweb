@@ -8,6 +8,6 @@ $('.single-item').slick({
   slidesToShow: 1,
   autoplay: true,
   fade:false,
-  autoplaySpeed: 10000,
+  autoplaySpeed: 5000,
   slidesToScroll: 1
 });
