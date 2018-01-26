@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "amazeui-slick": "0.0.2",
+    "amazeui-slick": "0.0.5",
     "animate.css": "^3.5.2",
     "async": "2.1.4",
     "dotenv": "4.0.0",
