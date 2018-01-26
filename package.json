@@ -1,6 +1,6 @@
 {
-  "name": "italent-incubator",
-  "version": "0.0.0",
+  "name": "itsiweb",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "amazeui-slick": "0.0.2",
