@@ -25,14 +25,21 @@ mixin post(post)
 		if post.content.extended
 			p.read-more: a(href='/blog/post/' + post.slug) 详细内容...
 
-block intro
-
 block content
 	// - Show banner on normal screen
 	.banner.m-b
 		img("src=/images/coffeesmall.png" style="position:absolute;margin-left:93px;margin-top:38px;").animated.fadeInRight
 		a(href="/about")
-			img("src=/images/find.png" style="position:absolute;margin-left:80px;margin-top:388px;")
+			img("src=/images/findblank.png" style="position:absolute;margin-left:80px;margin-top:388px;")
+		#source(hidden)
+			| 自由的获取你想要的知识！
+		#source1(hidden)
+			| 真切的感受知识的魅力！
+		#source2(hidden)
+			| 循序渐进的提升自身的技能！
+		#output-wrap(style="position:absolute;margin-left:165px;margin-top:420px;font-size:1.2rem;color:#4343437a")
+			span#output
+			span.typing-cursor |
 		img(src="/images/openknowledge.png"  alt="").bg-img
 
 		
@@ -75,4 +82,7 @@ block content
 							img(src="/images/articleno.png")
 					else
 						h3.text-muted 还没有文章发布.
+
+block js
+	script(src='/js/appui/typetext.js')
 		
