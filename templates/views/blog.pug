@@ -32,11 +32,6 @@ block content
 		a(href="/about")
 			img("src=/images/findblank.png" style="position:absolute;margin-left:80px;margin-top:388px;")
 		#source(hidden)
-			| 自由的获取你想要的知识！
-		#source1(hidden)
-			| 真切的感受知识的魅力！
-		#source2(hidden)
-			| 循序渐进的提升自身的技能！
 		#output-wrap(style="position:absolute;margin-left:165px;margin-top:420px;font-size:1.2rem;color:#4343437a")
 			span#output
 			span.typing-cursor |
@@ -46,7 +41,15 @@ block content
 	// - Show banner on mobile
 	.container.xbanner.styles__container-fluid___3f8lF
 		a(href="/about")
-			img(src="/images/coffeewatch.png" style='height:300px;width:160px; margin-left:110px;margin-top:5px;')
+			img("src=/images/findblank.png" style="height:40px;width:240px;position:absolute;margin-left:80px;margin-top:250px;")
+		#msource(hidden)
+		#moutput-wrap(style="position:absolute;margin-left:110px;margin-top:261px;font-size:0.5rem;color:#4343437a")
+			span#moutput
+			span.typing-cursor |
+		img(src="/images/future.jpg" style='height:370px;width:315px; margin-left:30px;margin-top:5px;')
+		.container.p-t.m-t
+			.styles__hero__title___DH178
+				h3.text-muted  Open-Knowlege
 	.container: .styles_center.row
 		if data.categories.length
 			.col-sm-4.col-md-3

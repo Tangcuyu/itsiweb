@@ -7,6 +7,8 @@
 			let nodeText = ['自由的获取你想要的知识！','真切的感受知识的魅力！','循序渐进的提升自身的技能！'];
 			let nodeObj = document.getElementById('source');
 			let nodeOut = document.getElementById('output');
+			
+			let nodeOutm = document.getElementById('moutput');
 
 			/*
 				函数 insertText：
@@ -68,6 +70,7 @@
 			let int = setInterval(function timer() {
 
 				typingText(insertText(nodeObj, nodeText),nodeOut);
+				typingText(insertText(nodeObj, nodeText),nodeOutm);
 			  	
 		  	}, time);
 
