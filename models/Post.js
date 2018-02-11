@@ -7,6 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 var Post = new keystone.List('Post', {
+	label: '技术文章',
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },
 });

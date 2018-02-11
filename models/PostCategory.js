@@ -7,6 +7,7 @@ var keystone = require('keystone');
  */
 
 var PostCategory = new keystone.List('PostCategory', {
+	label: '分类目录',
 	autokey: { from: 'name', path: 'key', unique: true },
 });
 

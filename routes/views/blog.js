@@ -14,7 +14,21 @@ exports = module.exports = function (req, res) {
 	locals.data = {
 		posts: [],
 		categories: [],
+		typingtext: [],
 	};
+
+	//Load all typing string
+
+	view.on('init', function(next){
+		keystone.list('TypingText').model.find().exec(function(err, results){
+			if (err || !results.length) {
+				return next(err);
+			}
+
+			locals.data.typingtext = results;
+			next();
+		});
+	});
 
 	// Load all categories
 	view.on('init', function (next) {
@@ -72,7 +86,7 @@ exports = module.exports = function (req, res) {
 			.sort('-publishedDate')
 			.populate('author categories');
 
-		/* 由于keystone本身问题，执行查询后，查询结果中的总数一直保持所有分类的总数，此处休正这个问题。
+		/* 由于keystone本身问题，执行查询后，查询结果中的总数一直保持所有分类的总数，此处修正这个问题。
 		   如果有分类，那么重置分类总数、分页数；如果没有分类，直接原有的系统生成的total和分页数组： local.data.posts.pages
 		   重置分类总数的时候，在执行q.exec之前，先用q.count()得到基于该分类的查询总数；
 		   

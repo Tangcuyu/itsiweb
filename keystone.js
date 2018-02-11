@@ -10,8 +10,8 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	'name': 'WebMassIP',
-	'brand': 'WebMassIP',
+	'name': 'OpenKnowledge',
+	'brand': 'OpenKnowledge',
 
 	'less': 'public',
 	'static': 'public',
@@ -48,10 +48,10 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-	IP地址: ['posts', 'post-categories'],
-	子网信息: 'enquiries',
-	扫描信息: 'users',
-	用户信息: ['candidates', 'title-categories', 'skill-categories', 'customers'],
+	技术文章: ['posts', 'post-categories'],
+	联系信息: 'enquiries',
+	用户信息: 'users',
+	候选人信息: ['candidates', 'title-categories', 'skill-categories', 'customers'],
 });
 
 // Start Keystone to connect to your database and initialise the web server

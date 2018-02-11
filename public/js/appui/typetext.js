@@ -10,6 +10,8 @@
 			
 			let nodeOutm = document.getElementById('moutput');
 
+			
+
 			/*
 				函数 insertText：
 
