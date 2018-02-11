@@ -4,7 +4,13 @@
 
 			let time = 3500;    // 设定循环的时间间隔
 			let key = 0;		// 确定文字数组索引位置的变量
-			let nodeText = ['自由的获取你想要的知识！','真切的感受知识的魅力！','循序渐进的提升自身的技能！'];
+			let nodeText = [
+				'自由的获取你想要的知识！',
+				'扎实的理论和丰富的实战项目！',
+				'真切的感受知识的魅力！',
+				'循序渐进的提升自身的技能！',
+				'随心所欲的释放知识的力量！'
+				];
 			let nodeObj = document.getElementById('source');
 			let nodeOut = document.getElementById('output');
 			
