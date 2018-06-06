@@ -19,10 +19,10 @@ var _ = require('lodash');
 */
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
+		{ label: '关于我们', key: 'home', href: '/about' },
 		{ label: 'Open-Knowledge', key: 'blog', href: '/blog' },
 		{ label: '人才服务', key: 'candidate', href: '/candidate' },
 		{ label: '软件开发', key: 'software', href: '/software' },
-		{ label: '关于我们', key: 'home', href: '/about' },
 		{ label: '加入我们', key: 'joinus', href: '/joinus' },
 	];
 	res.locals.user = req.user;
